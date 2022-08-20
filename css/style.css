@@ -357,8 +357,8 @@ nav ul {
 
 .body{
     display: grid;
-    font-family: 'Roboto', sans-serif;
     display: flex;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav ul {
