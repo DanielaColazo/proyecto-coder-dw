@@ -374,6 +374,7 @@ nav ul {
     border: solid #7b5d5e;  
     margin: 15px;
     padding: 20px; 
+    background: linear-gradient(to bottom, rgba(232,232,236,1) 0%, rgba(139,177,136,1) 50%, rgba(232,232,236,1) 100%) ;
 }
 .textoEstadia{
 font-family: 'Roboto' sans-serif;
@@ -387,12 +388,30 @@ margin-right: 15px;
 margin-top: 15px;
 }
 
+<<<<<<< HEAD
 footer {
 display: flex;
 flex-wrap: wrap;
 margin-top: 22vh;
 }
 
+=======
+.textoEstadia {
+    transform: translate(8px, 15px);
+}
+
+.container {
+    height: 100px;
+    width: fit-content;
+    margin-left:0%;
+    margin-top: 5%;
+}
+.animate__animated.animate__fadeInLeft.animate__fadeOutRight {
+    --animate-duration: 2s;
+animation-fill-mode: backwards;
+animation-delay: 1s;
+}
+>>>>>>> mi-rama
 /*Desarrollo html Contacto*/
 .body{
     display: grid;
@@ -412,4 +431,19 @@ nav ul {
 .formulario {
     padding-left: 10px;
     padding-top: 10px;
+}
+
+.input {
+    height: 2em;
+    width: 10em;
+    transition: height 3s, width 3s, background-color;
+}
+
+ .input:hover {
+    height: 3em;
+    width: 15em;
+    background-color: #DADEE7;
+ }
+.boton {
+    cursor: pointer;
 }
