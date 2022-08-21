@@ -361,6 +361,10 @@ nav ul {
     font-family: 'Roboto', sans-serif;
 }
 
+.bodyEstadias {
+    background-image: linear-gradient(to bottom, rgba(232,232,236,1) 0%, rgba(139,177,136,1) 50%, rgba(232,232,236,1) 100%);
+}
+
 nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -376,11 +380,33 @@ font-family: 'Roboto' sans-serif;
 font-weight: 300;
 font-style:normal;
 color: #2E3532;
-border: solid #e3604d;
+border: solid black;
 padding: 15px 15px 15px 15px;
 margin-left: 5px;
 margin-right: 15px;
 margin-top: 15px;
+}
+.textoEstadia {
+    transform: translate(8px, 15px);
+
+}
+
+.container {
+    height: 100px;
+    width: fit-content;
+    margin-left:0%;
+    margin-top: 5%;
+}
+.animate__animated.animate__fadeInLeft.animate__fadeOutRight {
+    --animate-duration: 2s;
+animation-fill-mode: backwards;
+animation-delay: 1s;
+}
+
+footer {
+display: flex;
+flex-wrap: wrap;
+margin-top: 22vh;
 }
 
 /*Desarrollo html Contacto*/
@@ -396,8 +422,23 @@ nav ul {
     background-size: 100%;
     border: solid #7b5d5e;  
     margin: 15px;
-    padding: 20px; 
+    padding: 40px; 
 }
+
+.input {
+    height: 2em;
+    width: 10em;
+    transition: height 3s, width 3s, background-color;
+}
+
+ .input:hover {
+    height: 3em;
+    width: 15em;
+    background-color: #DADEE7;
+ }
+.boton {
+    cursor: pointer;
+ }
 
 .formulario {
     padding-left: 10px;
