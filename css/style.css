@@ -370,6 +370,7 @@ nav ul {
     border: solid #7b5d5e;  
     margin: 15px;
     padding: 20px; 
+    background: linear-gradient(to bottom, rgba(232,232,236,1) 0%, rgba(139,177,136,1) 50%, rgba(232,232,236,1) 100%) ;
 }
 .textoEstadia{
 font-family: 'Roboto' sans-serif;
