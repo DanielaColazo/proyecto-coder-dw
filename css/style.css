@@ -388,14 +388,12 @@ margin-right: 15px;
 margin-top: 15px;
 }
 
-<<<<<<< HEAD
 footer {
 display: flex;
 flex-wrap: wrap;
 margin-top: 22vh;
 }
 
-=======
 .textoEstadia {
     transform: translate(8px, 15px);
 }
@@ -411,7 +409,7 @@ margin-top: 22vh;
 animation-fill-mode: backwards;
 animation-delay: 1s;
 }
->>>>>>> mi-rama
+
 /*Desarrollo html Contacto*/
 .body{
     display: grid;
