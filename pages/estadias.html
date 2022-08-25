@@ -8,39 +8,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&family=Urbanist:ital,wght@0,100;0,300;0,600;1,100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <title>Estadias</title>
 </head>
-<body class="body bodyEstadias">
-    <header>
-        <section>
-           <h1 class="titulo disenoTitulo"> <a href="../index.html"> ESPACIO DEHEZA</a></h1>
-        </section>
-       <nav id="colorNav" >
-           <ul>
-               <li> <a href="./eldpto.html"> El dpto </a></li>
-               <li> <a href="./estadias.html"> Estadias </a></li>
-               <li> <a href="./cba.html"> Cba </a></li>
-               <li> <a href="./contacto.html"> Contacto </a></li>
-           </ul>
-       </nav> 
-    </header>
-    <main class="estadiasMain">
-        <section class="banner"><p class="textoHola"> ¡Hola! </p></section> 
-        <h2 class="disenoSubtitulo"> ESTADIAS </h2> 
-        <section class="textoEstadia">
+<body class="body body-estadias">
+    <header class="sticky-top">  
+        <nav class="navbar navbar-expand-lg bg-olive">
+          <div class="container-fluid">
+            <h1 class="diseno-titulo"><a class="ms-3" href="../index.html"> ESPACIO DEHEZA </a></h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+              <div class="navbar-nav me-3">
+                  <a class="nav-link color-nav" href="./eldpto.html">Departamento</a>
+                  <a class="nav-link color-nav" href="./estadias.html">Estadías</a>
+                  <a class="nav-link color-nav" href="./cba.html">Córdoba</a>
+                  <a class="nav-link color-nav" href="./contacto.html">Contacto</a>    
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <main class="estadias-main">
+        <section class="banner"><p class="texto-hola"> ¡Hola! </p></section> 
+        <h2 class="diseno-subtitulo"> ESTADIAS </h2> 
+        <section class="texto-estadia">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quam obcaecati distinctio odit accusamus eligendi facere cumque dolorem? Temporibus nam possimus atque adipisci. Earum distinctio doloribus iste repellat? Maiores in natus quas voluptas libero laudantium quam aut ut quo inventore quaerat, temporibus soluta voluptatibus qui ratione fugit necessitatibus cupiditate a eaque officia incidunt ex pariatur ipsum fugiat. Dicta, consequatur quaerat.
         </section>
         <section class="animate__animated animate__fadeInLeft animate__fadeOutRight"> 
             <img class="container" src="../images/6383307.jpg" alt="Imagen de mujer manejando un auto amarillo">
         </section>
     </main>
-    <footer>
-        <p class="colorFooter"> Proyecto desarrollado por <span> Daniela Colazo </span> </p> 
-        <ul class="colorFooter">
+    <footer class="sticky-bottom">
+        <p class="color-footer"> Proyecto desarrollado por <span> Daniela Colazo </span> </p> 
+        <ul class="color-footer
+        ">
             <li> <a href="https://www.instagram.com/espaciodeheza/"> Instagram </a></li>
             <li> <a href="https://www.whatsapp.com/?lang=es"> Whatsapp </a></li>
         </ul>
     </footer>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>        
 </body>
 </html>

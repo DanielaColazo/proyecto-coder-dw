@@ -12,71 +12,61 @@ box-sizing: border-box;
 }
 
 /*Desarrollo index header*/
-header {
-    background-color:#acba9d;
-    height: 4em;
+header{
     position: sticky;
-    top: 0%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+}
+.bg-olive{
+    background-color:#acba9d;
 }
 
-nav ul li{
-    list-style: none;
-    margin: 10px;
-    padding-left: 10px;
-    padding-top: 15px;
-}
-    
-nav ul li a:link, a:visited, a:active {    
+.diseno-titulo a{
     text-decoration: none;
-    cursor: pointer;
-    }
-
-#colorNav a{
-    color: #2E3532;
-    font-family:'Urbanist', sans-serif;
-    font-weight: bold;
+    color: #2e3532;
 }
-
-.menu {
-    display: flex;
+.diseno-titulo a:hover{
+    color: white;
 }
-  
-.titulo a:link, a:visited, a:active{
-    text-decoration: none;
-    color: #C7CEDB;
-}
-
-.disenoTitulo {
+        
+.diseno-titulo {
     font-family: 'Urbanist', sans-serif;
     font-weight:bold, 600;
     font-size: 35px;
     margin-left: 15px;
     margin-top: 10px;
 }
+.navbar-nav a{
+    font-family:'Urbanist', sans-serif;
+    font-weight: bold, 600;
+}
+.color-nav {
+    color: white;
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+/*Desarrollo Main*/
 
-.disenoSubtitulo {
+.diseno-subtitulo {
     margin-left: 30px;
     padding-top: 20px;
     margin-bottom: 30px;
 }
-
-/*Desarrollo Main*/
-
-.mainGrid{
+main {
+    background-color: #F8FAFF;
+}
+.main-grid{
     display: grid;
     grid-template-areas: "banner banner banner" 
-                         "elSubtitulo elSubtitulo elSubtitulo"
-                         "cardIndex cardIndex cardIndex";
+                         "el-subtitulo el-subtitulo el-subtitulo"
+                         "carousel carousel carousel"
+                         "card card card";
     grid-template-columns: 33% 33% 34%;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     border: solid #7b5d5e;  
-    margin: 15px;
-    padding: 20px; 
+    margin: 1em;
+    padding: 1.3em; 
     color: #2E3532;
-    background-color: #F8FAFF;
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
@@ -86,48 +76,46 @@ nav ul li a:link, a:visited, a:active {
 .banner {
     grid-area: banner;
     background-color: #7b5d5e;
-    padding: 35px;
+    padding: 2.1em;
     padding-right: 50%;
-    margin-left: 0%;
-    margin-top: 10px;
+    margin-top: .8em;
     text-align: right; 
 }
-.elSubtitulo{ 
-    grid-area: elSubtitulo;
+.el-subtitulo{ 
+    grid-area: el-subtitulo;
     margin-top: 20px;
     margin-left: 20px;
     }
-
-.cardIndex {
-    grid-area: cardIndex;
-    display: flex;
+.carousel{
+    grid-area: carousel;
+}    
+.card{
+    grid-area: card;
 }
-
-.cardIndex .imagenIndex{
-   display: flex;
-   width: fit-content;
-   height: 50em;
-   margin: 1px;
-   padding: 1em;
-}
-
-.cardIndex .textoIndex {
+.btn-primary{
+    background-color:#7d6364;
+    border-color: #7d6364;
+    transition: ease-out, 1s;
+    }
+.btn-primary:hover{
+    background-color: #d4bcbc;
+    border-color: #d4bcbc;
+    transform: scale(.95);
+}    
+.btn-primary-color a{
     font-family: 'Roboto' sans-serif;
-    font-weight: bolder;
-    height: 10em;
-    margin: 1em;
-    padding: 1em;
-    margin-top: 0;
-    margin-bottom: 18px;
-    text-align: center;
-    padding-top: 15%;
+    font-weight: bold, 300;
+}
+
+.btn-primary-color a{
+    color: white;
 }
 
 h2 {font-family: 'Urbanist', sans-serif;
     font-size:25px;
 }
 
-.textoHola {
+.texto-hola {
     font-family: 'Urbanist', sans-serif;
     font-weight:bold, 600;
     font-size: 25px;
@@ -141,6 +129,7 @@ footer {
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     }
 
@@ -152,7 +141,7 @@ footer ul li a:link, a:visited, a:active {
     cursor: pointer;
 }
 
- .colorFooter a{
+ .color-footer a{
     color: #2E3532;
     font-family: 'Urbanist'sans-serif;
     font-weight: bold;
@@ -160,7 +149,7 @@ footer ul li a:link, a:visited, a:active {
     justify-content: space-evenly;
  }
 
- .colorFooter {
+ .color-footer {
     color: #2E3532;
     font-family: 'Urbanist'sans-serif;
     font-weight: bold;
@@ -173,13 +162,15 @@ footer ul li a:link, a:visited, a:active {
  }
 
  @media only screen and (max-width: 500px) {
-    .mainGrid {
+   
+    .main-grid {
         grid-template-areas: "banner" 
-                             "elSubtitulo"
-                             "primerSeccion"
-                             "segundaSeccion";
+                             "el-subtitulo"
+                             "carousel"
+                             "card";
         grid-template-columns: 1fr;
-        grid-template-rows: auto;} 
+        grid-template-rows: auto;
+    } 
     
     .primerSeccion {
         justify-content:space-around;
@@ -195,26 +186,21 @@ footer ul li a:link, a:visited, a:active {
     display: flex;
 }
 
-header {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 nav ul {
     display: flex;
     flex-wrap: wrap;
 }
-.dptoMainGrid {
+.dpto-main-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto auto;
     grid-template-areas:"banner banner"
-                        "disenoSubtitulo disenoSubtitulo"   
-                        "card1 card1"
-                        "card2 card2"
-                        "card3 card3";
+                        "diseno-subtitulo diseno-subtitulo"   
+                        "carousel carousel"
+                        "texto-departamente texto-departamento";
     border: solid #7b5d5e;  
     margin: 15px; 
+    padding: 20px;
     row-gap: 1.5em;
     padding: 1.5em;
     display: flex;
@@ -223,72 +209,39 @@ nav ul {
     .banner {
         grid-area: banner;
     }
-    .disenoSubtitulo {
-        grid-area: disenoSubtitulo;
+    .diseno-subtitulo {
+        grid-area: diseno-subtitulo;
     }       
-    .card1{
-        grid-area: card1;
-        display: flex;
-        justify-content:space-between;
-        text-align: center;
-    }
-
-    .card2{
-        grid-area: card2;
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-    }
- 
-    .card3{
-        grid-area: card3;
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-    }
-
     .elTitulo{
         margin-left: 10%;
         margin-bottom: 50px;
     }
-
-    .cardDpto .textoDpto{
-        margin-top: 20em;
-        margin-left: 1em;
-    }
-    .cardDpto .textoDpto {
-        font-family: 'Roboto' sans-serif;
-        font-weight: bolder;
-        color:#2E3532;
-        margin-left: 1em;
-        margin-right: 2em;
-        text-align:start;
-    }
+   .texto-departamento {
+    font-family: 'Roboto' sans-serif;
+    font-weight: bold, 300;
+    color:#2E3532;
+    justify-content: center;
+    border:solid #2E3532;
+    padding: 3%;
+   }
 /*MEDIA QUERIES*/   
 @media only screen and (max-width: 1024px) {
 
 }
 
 @media only screen and (max-width: 500px) {
-    .dptoMainGrid {
+    .dpto-main-grid {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas:"banner"
-                            "disenoSubtitulo"   
+                            "diseno-subtitulo"   
                             "card1" 
                             "card2" 
                             "card3";
         display: flex;
         flex-direction: column;
 }
-}
-.cardDpto{
-    display: flex;
-    flex-direction: column;
-}
-.cardDpto .textoDpto{
-    margin-top: 5em;
 }
 
 /*Desarrollo html Cordoba*/
@@ -298,19 +251,16 @@ nav ul {
     flex-direction: column;
 }
 
-nav ul {
-    display: flex;
-}
-.elMainCba {
+.el-main-cba {
     border: solid #7b5d5e;
-    margin: 15px;
-    padding: 20px;
+    margin: 1em;
+    padding: 1.3em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:"banner banner"
-                        "disenoSubtitulo disenoSubtitulo"   
-                        "cardCba cardCba";
+                        "diseno-subtitulo diseno-subtitulo"   
+                        "card-cba card-cba";
     border: solid #7b5d5e;  
     margin: 15px; 
     row-gap: 1.5em;
@@ -322,35 +272,33 @@ nav ul {
 .banner {
     grid-area: banner;
 }
-.disenoSubtitulo {
-    grid-area: disenoSubtitulo;
+.diseno-subtitulo {
+    grid-area: diseno-subtitulo;
 }       
-.cardCba{
-    grid-area: cardCba;
+.card-cba{
+    grid-area: card-cba;
     display: flex;
+    flex-direction: column;
     padding: 5%;
 }
 
-.cardCba .textoCordoba {
+.card-cba .texto-cordoba {
     font-family: 'Roboto' sans-serif;
-    font-weight: bolder 300;
+    font-weight: bold, 300;
     color:#2E3532;
-    margin-left: 1em;
-    margin-right: 2em;
+    padding: 2%;
     justify-content: center;
     border:solid #2E3532;
-    padding: 5%;
 }
 
-.textoCordoba {
+.texto-cordoba {
     text-align:justify;
 }
 
-.cardCba .imagenBg{
-    width: 50%;
-    margin-left: 0px;
-    display: flex;
-    flex: 3;
+.card-cba .imagen-bg{
+    width: 80vw;
+    height: auto;
+    margin: 2% 2% 2% 2%;
 }
 
 /*Desarrollo html Estadias*/
@@ -361,7 +309,7 @@ nav ul {
     font-family: 'Roboto', sans-serif;
 }
 
-.bodyEstadias {
+.body-estadias {
     background-image: linear-gradient(to bottom, rgba(232,232,236,1) 0%, rgba(139,177,136,1) 50%, rgba(232,232,236,1) 100%);
 }
 
@@ -370,13 +318,13 @@ nav ul {
     flex-wrap: wrap;
 }
 
-.estadiasMain{
+.estadias-main{
     border: solid #7b5d5e;  
-    margin: 15px;
-    padding: 20px; 
+    margin: 1em;
+    padding: 1.3em; 
     background: linear-gradient(to bottom, rgba(232,232,236,1) 0%, rgba(139,177,136,1) 50%, rgba(232,232,236,1) 100%) ;
 }
-.textoEstadia{
+.texto-estadia{
 font-family: 'Roboto' sans-serif;
 font-weight: 300;
 font-style:normal;
@@ -394,7 +342,7 @@ flex-wrap: wrap;
 margin-top: 22vh;
 }
 
-.textoEstadia {
+.texto-estadia {
     transform: translate(8px, 15px);
 }
 
@@ -415,31 +363,30 @@ animation-delay: 1s;
     display: grid;
     display: flex;
 }
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-.elMainContacto {
+
+.el-main-contacto {
     background-size: 100%;
     border: solid #7b5d5e;  
-    margin: 15px;
-    padding: 40px; 
+    margin: 1em;
+    padding: 1.3em;
 }
 
 .formulario {
+    font-family: 'Roboto' sans-serif;
+    font-size: medium;
     padding-left: 10px;
     padding-top: 10px;
 }
 
 .input {
-    height: 2em;
+    height: 1.5em;
     width: 10em;
     transition: height 3s, width 3s, background-color;
 }
 
  .input:hover {
-    height: 3em;
-    width: 15em;
+    height: 2em;
+    width: 12em;
     background-color: #DADEE7;
  }
 .boton {

@@ -7,11 +7,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&family=Urbanist:ital,wght@0,100;0,300;0,600;1,100&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <title>Contacto</title>
 </head>
 <body class="body">
-    <header>
+    <header class="sticky-top">  
+        <nav class="navbar navbar-expand-lg bg-olive">
+            <div class="container-fluid">
+                <h1 class="diseno-titulo"><a class="text-color ms-3" href="../index.html"> ESPACIO DEHEZA </a></h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav me-3">
+                    <a class="nav-link color-nav" href="./eldpto.html">Departamento
+                    </a>
+                    <a class="nav-link color-nav" href="./estadias.html">Estadías</a>
+                    <a class="nav-link color-nav" href="./contacto.html">Córdoba</a>
+                    <a class="nav-link color-nav" href="./contacto.html">Contacto</a>    
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>  
+    <!--<header>
         <section>
            <h1 class="titulo disenoTitulo"> <a href="../index.html"> ESPACIO DEHEZA</a></h1>
         </section>
@@ -23,37 +43,39 @@
                <li> <a href="./contacto.html"> Contacto </a></li>
            </ul>
        </nav> 
-    </header> 
-    <main class="elMainContacto">
-        <section class="banner"> <p class="textoHola"> ¡Hola! </p></section> 
-        <h2 class="disenoSubtitulo"> CONTACTO </h2>
+    </header>--> 
+    <main class="el-main-contacto">
+        <section class="banner"> <p class="texto-hola"> ¡Hola! </p></section> 
+        <h2 class="diseno-subtitulo"> CONTACTO </h2>
         <form class="formulario" action="" method="post">
             <fieldset>
-                <legend>Dejanos tus datos y nos contactamos con vos</legend>
+                <legend class="fs-6">Dejanos tus datos y nos contactamos con vos</legend>
                 <div>
                     <label for="Nombre" >Ingresa tu nombre</label>
                     <input class="input" type="text" id="Nombre" placeholder="Ingresa tu nombre">   
                 </div>
-                <div>
+                <div class="fs-6">
                     <label for="Correo" >Ingresa tu mail</label>
                     <input class="input" type="email" id="Correo" placeholder="Ingresa tu mail">
                 </div>
-                <div>    
+                <div class="fs-6">    
                     <label for="Fecha"> Fecha de tu estadia</label>
                     <input class="input" type="date" id="Fecha" placeholder="Fecha de tu estadia">
                 </div>
                 <div>    
-                    <button class="boton" type="submit"> Enviar </button>
+                    <button type="button" class="btn btn-primary mt-3">Enviar</button>
                 </div>
             </fieldset>
         </form>  
     </main>
-    <footer>
-        <p class="colorFooter"> Proyecto desarrollado por <span> Daniela Colazo </span> </p> 
-        <ul class="colorFooter">
+    <footer class="sticky-bottom">
+        <p class="color-footer"> Proyecto desarrollado por <span> Daniela Colazo </span> </p> 
+        <ul class="color-footer">
             <li> <a href="https://www.instagram.com/espaciodeheza/"> Instagram </a></li>
             <li> <a href="https://www.whatsapp.com/?lang=es"> Whatsapp </a></li>
         </ul>
     </footer>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>    
 </body>
 </html>

@@ -8,46 +8,116 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&family=Urbanist:ital,wght@0,100;0,300;0,600;1,100&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <title> Espacio Deheza </title>
 </head>
 <!-- BODY -->
 <body class="body">
     <!-- HEADER -->
-    <header>
+  <header class="sticky-top">  
+    <nav class="navbar navbar-expand-lg bg-olive">
+      <div class="container-fluid">
+        <h1 class="diseno-titulo"><a class="ms-3" href="./index.html"> ESPACIO DEHEZA </a></h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav me-3">
+              <a class="nav-link color-nav" href="./pages/eldpto.html">Departamento</a>
+              <a class="nav-link color-nav" href="./pages/estadias.html">Estadías</a>
+              <a class="nav-link color-nav" href="./pages/cba.html">Córdoba</a>
+              <a class="nav-link color-nav" href="./pages/">Contacto</a>    
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>  
+    <!--<header class="sticky-top">
         <section>
             <h1 class="titulo disenoTitulo"><a href="./index.html"> ESPACIO DEHEZA</a></h1>
         </section>
-        <section>
-            <nav id="colorNav" >
-                <ul class="menu">
+        <div class="d-flex flex-wrap">
+            <nav id="colorNav" class="menu">
+                <ul >
                     <li> <a href="./pages/eldpto.html"> El dpto </a></li>
                     <li> <a href="./pages/estadias.html"> Estadias </a></li>
                     <li> <a href="./pages/cba.html"> Cba </a></li>
                     <li> <a href="./pages/contacto.html"> Contacto </a></li>
                 </ul>
             </nav> 
-        </section>
-    </header>  
+        </div>
+    </header>-->  
     <!-- MAIN -->
-    <main class="mainGrid">  
-        <div class="banner"> <p class="textoHola"> ¡Hola! </p> </div> 
-        <h2 class="elSubtitulo disenoSubtitulo"> DEPARTAMENTO EN ALQUILER TEMPORAL </h2>
-        <div class="cardIndex">
+  <main class="main-grid mt-3">  
+    <div class="banner"> <p class="texto-hola"> ¡Hola! </p> </div> 
+      <h2 class="el-subtitulo diseno-subtitulo"> DEPARTAMENTO EN ALQUILER TEMPORAL </h2>
+        <div  id="carouselExampleControls" class="carousel slide"          data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./images/1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./images/3.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./images/4.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./images/5.png" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!--<div class="cardIndex">
             <section class="imagenIndex"> <img src="./images/281741162_148368804379937_1086168717171029759_n.jpg" alt="Un living muy ordenado y luminoso"> </section>
             <section  class="textoIndex"> <p> Bienvenidos a "Espacio Deheza", un departamento en alquiler temporal ubicado en Barrio General Paz, 
             a pocos minutos de los barrios Nueva Córdoba, Centro y Alta Córdoba. 
             Cualquier duda, estamos a disposición.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit in excepturi nisi! Voluptatem hic repellendus quis ipsum aperiam officia quasi at obcaecati mollitia earum, nobis animi reiciendis, modi explicabo similique praesentium illum ipsam harum tempore. Impedit, provident repellat. Doloremque quo incidunt, repellendus quos illo voluptas quis, corporis odit ullam nam perferendis nostrum officiis a! Labore illum, deleniti cumque, dolore corporis repudiandae officia voluptas, quis molestiae eos aliquid neque ipsum porro quae laboriosam maxime voluptatum eveniet voluptate eaque? Labore pariatur voluptatibus, rem quaerat nulla repellendus illo, quibusdam voluptas voluptatum praesentium commodi sapiente quam, fuga aspernatur mollitia corrupti unde optio distinctio officiis?</p></section> 
+        </div>-->
+          <div class="d-flex row d-flex justify-content-evenly">
+            <div class="card mt-5 mb-3" style="width: 18rem;">
+              <img src="./images/_MG_2186-1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="d-flex justify-content-center"> <a href="./pages/eldpto.html" class="btn btn-primary">Departamento</a></h5>
+                <p class="card-text mt-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div class="card mt-5 mb-3 ms" style="width: 18rem;">
+              <img src="./images/flat-lay-real-estate-concept.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="d-flex justify-content-center"> <a href="./pages/estadias.html" class="btn btn-primary">Estadías</a></h5>
+                <p class="card-text mt-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+          </div>
+          <div class="card mt-5 mb-3" style="width: 18rem;">
+            <img src="./images/argentina-7111640_1920.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="d-flex justify-content-center"><a href="./pages/cba.html" class="btn btn-primary">Córdoba</a></h5>
+            <p class="card-text mt-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
         </div>
+      </div>
     </main>   
     <!-- FOOTER -->
-    <footer>
-        <p class="colorFooter"> Proyecto desarrollado por <span> Daniela Colazo </span> </p> 
-        <ul class="flexFooter colorFooter">
+    <footer class="sticky-bottom">
+        <p class="color-footer"> Proyecto desarrollado por <span> Daniela Colazo </span> </p> 
+        <ul class="flex-footer color-footer">
             <li> <a href="https://www.instagram.com/espaciodeheza/"> Instagram </a></li>
             <li> <a href="https://www.whatsapp.com/?lang=es"> Whatsapp </a></li>
         </ul>
     </footer>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>    
 </body>
 </html>
+
+<!--UNA HORA ONCE MINUTOS-->
