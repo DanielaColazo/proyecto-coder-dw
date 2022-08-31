@@ -1,0 +1,173 @@
+header{
+    position: sticky;
+    margin: .9em;
+        nav{
+            background-color:#acba9d;               
+            div{
+                .diseno-titulo {
+                        margin-left: 15px;
+                        margin-top: 10px;    
+                    }
+                    a{
+                        text-decoration: none;
+                        color: #2e3532;
+                        font-family: 'Urbanist', sans-serif;
+                        font-weight:bold, 600;
+                        font-size: 35px;
+                        &:hover {
+                            color: white;}
+                        }   
+                    } 
+                .color-icono {
+                        background-color: #F8FAFF;
+                        border: solid #F8FAFF;
+                    }
+                }   
+                div{
+                    div{
+                        .navbar-nav{
+                            a{
+                                font-family:'Urbanist', sans-serif;
+                                font-weight: bold, 600;
+                                &:hover {
+                                    color: black;
+                                    }
+                                }
+                            .color-nav 
+                                {color:white;
+                                }
+                            }
+                        }
+                    }
+                } 
+main{
+    background-color: #F8FAFF;
+    display: grid;
+        grid-template-areas: "banner banner banner" 
+                             "el-subtitulo el-subtitulo el-subtitulo"
+                             "carousel carousel carousel"
+                             "las-cards las-cards las-cards";
+        grid-template-columns: 33% 33% 34%;
+        grid-template-rows: auto auto auto auto;
+        border: solid #7b5d5e;  
+        margin: 1em;
+        padding: 1.3em; 
+        color: #2E3532;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Roboto', sans-serif;
+    .banner{
+        grid-area: banner;
+        background-color: #7b5d5e;
+        padding: 2.1em;
+        padding-right: 50%;
+        margin-top: .8em;
+        text-align: right; 
+        height: 7em;
+        .texto-hola{
+            font-family: 'Urbanist', sans-serif;
+            font-weight:bold, 600;
+            font-size: 25px;
+            }
+        }
+    h2 {    
+        font-family: 'Urbanist', sans-serif;
+        font-size:25px;
+            grid-area: el-subtitulo;
+            margin-top: 1em;
+            margin-left: 2em;
+            margin-left:2em;
+            padding-top: 1em;
+            margin-bottom: 2em; 
+        }
+    .carousel {
+        grid-area: carousel; 
+    }
+    .las-cards {
+        div{
+            div{
+                h5{
+                    font-family: 'Roboto' sans-serif;
+                    font-weight: bold, 300;
+                    a{
+                        background-color:#7d6364;
+                        border-color: #7d6364;
+                        transition: ease-out, 1s;
+                        color: white;
+                        &:hover {
+                            background-color: #d4bcbc;
+                            border-color: #d4bcbc;
+                            transform: scale(.95);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+footer {
+    background-color: #acba9d;
+    width:cover;
+    height: 50px;
+    margin: .9em;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    p  {
+        font-family: 'Urbanist'sans-serif;
+        font-weight: bold;
+        font-size: small;
+        color: #2E3532;
+    }
+    ul {
+        font-family: 'Urbanist'sans-serif;
+        font-weight: bold;
+        font-size: small;
+        color: #2E3532;
+        li {
+            display: inline-flex;
+            a:link, a:visited, a:active {
+                text-decoration: none;
+                cursor: pointer;
+            }
+            a {     
+                font-family: 'Urbanist'sans-serif;
+                font-weight: bold;
+                font-size: small;         
+                color: #2E3532;
+                &:hover{
+                    color: white;
+                }
+            }    
+        }
+    }
+}
+ /*MEDIA QUERIES INDEX*/
+
+     /*/ Small devices (landscape phones, 576px and up)*/
+     @media (min-width: 576px) and (max-width: 768px){
+
+        .main-grid {
+            grid-template-areas: "banner" 
+                                 "el-subtitulo"
+                                 "carousel"
+                                 "las-cards";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto;
+            border: solid 5px  #7b5d5e ;
+            .las-cards {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+            }
+            .diseno-subtitulo{
+                align-self: center;
+            }
+        }
+    }
+
