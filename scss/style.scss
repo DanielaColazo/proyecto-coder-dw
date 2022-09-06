@@ -110,7 +110,6 @@ main{
             }
         }
     }
-    
     footer {
         background-color: $color-header-footer;
         width:cover;
@@ -181,91 +180,94 @@ main{
  /*Desarrollo html Dpto*/
     
  .body{
-    display: grid;
-    display: flex;
+    .dpto-main-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:"banner banner"
+                            "diseno-subtitulo diseno-subtitulo"   
+                            "carousel carousel"
+                            "texto-departamento texto-departamento";
+        border: solid #7b5d5e;  
+        margin: 1em;
+        padding: 1.3em; 
+        row-gap: 1.5em;
+        padding: 1.5em;
+        @include flexbox(column);
+        .banner {
+            grid-area: banner;
+        }
+        .diseno-subtitulo {
+            grid-area: diseno-subtitulo;
+        }       
+        .carousel{
+            grid-area: carousel;
+        }
+        .texto-departamento {
+            grid-area: texto-departamento;
+            @include font-family (black, 300);
+            justify-content: center;
+            border:solid #2E3532;
+            padding: 3%;
+        }
     }
-.dpto-main-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas:"banner banner"
-                        "diseno-subtitulo diseno-subtitulo"   
-                        "carousel carousel"
-                        "texto-departamento texto-departamento";
-    border: solid #7b5d5e;  
-    margin: 1em;
-    padding: 1.3em; 
-    row-gap: 1.5em;
-    padding: 1.5em;
-    @include flexbox(column);
-
-}
-    .banner {
-        grid-area: banner;
+    footer {
+        background-color: $color-header-footer;
+        width:cover;
+        height: $margen/2;
+        margin: .9em;
+        padding-left: $margen/10;
+        padding-right: $margen/10;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        p  {
+            font-family: 'Urbanist', sans-serif;
+            font-weight: bolder;
+            font-size: $margen/7;
+            color: $color-letra-oscuro;
+            }
+        ul {
+            font-family: 'Urbanist', sans-serif;
+            font-weight: bolder;
+            font-size: $margen/7;
+            li {
+                display: inline-flex;
+                a:link, a:visited, a:active {
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+                a {     
+                    color: $color-letra-oscuro;
+                    &:hover{
+                        color: white;
+                    }
+                }    
+            }
+        }
     }
-    .diseno-subtitulo {
-        grid-area: diseno-subtitulo;
-    }       
-
-    .carousel{
-        grid-area: carousel;
-    }
-
-   .texto-departamento {
-    grid-area: texto-departamento;
-    @include font-family (black, 300);
-    justify-content: center;
-    border:solid #2E3532;
-    padding: 3%;
-   }
-
 
 /*MEDIA QUERIES*/   
 /*/ Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) and (max-width: 768px){
-
-    .dpto-main-grid {
-        grid-template-areas: "banner" 
-                             "diseno-subtitulo"
-                             "carousel"
-                             "texto-departamento";
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
-        border: solid 5px  #7b5d5e;
-        gap: 2em;
-    } 
-    .diseno-subtitulo{
-        align-self: center;
-}
+    @media (min-width: 576px) and (max-width: 768px){
+        .dpto-main-grid {
+            grid-template-areas: "banner" 
+                                "diseno-subtitulo"
+                                "carousel"
+                                "texto-departamento";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto;
+            border: solid 5px  #7b5d5e;
+            gap: 2em;
+            }    
+        .diseno-subtitulo{
+            align-self: center;
+        }
+    }
 }
 
 /*Desarrollo html Cordoba*/
 .body {
-    display: grid;
-    @include flexbox(column);
-    header {
-        position: sticky;
-        margin: .9em;
-        nav{
-            div{
-                h1{
-                    @extend .diseno-subtitulo;
-                    grid-area: diseno-subtitulo;
-                    } 
-                }
-                button {
-                    @extend .color-icono;
-                    }
-                div{
-                    div{
-                        a{
-                            @extend .color-nav;
-                        }
-                    }
-                }        
-            }
-        } 
-    }
     .el-main-cba {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -298,197 +300,167 @@ main{
             padding: 1.5rem;
         }
     }
-
- 
-
-
-
-
 /*/ Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) and (max-width: 768px){
-    .el-main-cba {
-        border: solid 5px #7b5d5e;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        grid-template-areas:"banner"
-                            "diseno-subtitulo"   
-                            "card-cba";
-        gap: 3em;
-       @include font-family (black, medium);                  
-    } 
-    .diseno-subtitulo{
-        align-self: center;
+    @media (min-width: 576px) and (max-width: 768px){
+        .el-main-cba {
+            border: solid 5px #7b5d5e;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:"banner"
+                                "diseno-subtitulo"   
+                                "card-cba";
+            gap: 3em;
+        @include font-family (black, medium);                  
+        } 
+        .diseno-subtitulo{
+            align-self: center;
+        }
     }
 }
+
 /*Desarrollo html Estadias*/
 
 .body{
-    display: grid;
-    display: flex;
-}    
-nav ul {
-    @include flexbox(row);
-    flex-wrap: wrap;
-}
-
-.estadias-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:"banner banner"
-                        "diseno-subtitulo diseno-subtitulo"   
-                        "texto-estadia texto-estadia"
-                        "animacion animacion";
-    row-gap: 1.5em;
-    border: solid #7b5d5e;  
-    margin-top: $margen/10;
-    margin-bottom: $margen/10;
-    margin: 1em;
-    padding: 1.3em; 
-    @include flexbox(column);
-}
-   
-
-.texto-estadia{
-grid-area: texto-estadia;
-@include font-family (black, medium);
-border: solid black;
-padding: 15px 15px 15px 15px;
-margin-left: 5px;
-margin-right: 15px;
-margin-top: 15px;
-}
-
-footer {
-@include flexbox(row);
-flex-wrap: wrap;
-margin-top: 22vh;
-}
-
-
-.container {
-    height: 100px;
-    width: fit-content;
-    margin-left:0%;
-    margin-top: 5%;
-}
-.animate__animated.animate__fadeInLeft.animate__fadeOutRight {
-    --animate-duration: 2s;
-animation-fill-mode: backwards;
-animation-delay: 1s;
-}
-@media (min-width: 576px) and (max-width: 768px) {
     .estadias-main {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas:"banner"
-                            "diseno-subtitulo"   
-                            "texto-estadia"
-                            "animacion";
-        border: solid 5px #7b5d5e;  
-    }   
-    .diseno-subtitulo{
-        align-self: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:"banner banner"
+                            "diseno-subtitulo diseno-subtitulo"   
+                            "texto-estadia texto-estadia";
+        row-gap: 1.5em;
+        border: solid $color-banner;  
+        margin-top: $margen/10;
+        margin-bottom: $margen/10;
+        margin: 1em;
+        padding: 1.3em; 
+        @include flexbox(column);
+        .banner{
+            grid-area: banner;
+        }
+        .diseno-subtitulo{
+            grid-area: diseno-subtitulo;
+        }
+        .texto-estadia{
+            grid-area: texto-estadia;
+            @include font-family (black, medium);
+            border: solid black;
+            padding: 15px 15px 15px 15px;
+            margin-left: 5px;
+            margin-right: 15px;
+            margin-top: 15px;
+            margin-bottom: 45px;
+        }
+    }
+
+    footer {
+        @include flexbox(row);
+        flex-wrap: wrap;
+        margin-top: 22vh;
+    }
+
+    @media (min-width: 576px) and (max-width: 768px) {
+        .estadias-main {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:"banner"
+                                "diseno-subtitulo"   
+                                "texto-estadia";
+            border: solid 5px $color-banner;  
+        }   
+        .diseno-subtitulo{
+            align-self: center;
+        }
     }
 }
+
 /*Desarrollo html Contacto*/
 .body{
-    display: flex;
-}
-
-.el-main-contacto {
-    background-size: 100%;
-    border: solid #7b5d5e;  
-    margin: 1em;
-    padding: 1.3em;
-    padding-bottom: 0%;
-    margin-bottom: 0%;
-    grid-template-areas: "banner banner"
-                         "diseno-subtitulo diseno-subtitulo"
-                         "form-mapa form-mapa"
-                         "form-mapa form-mapa";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto;                     
-}
-.banner{
-    grid-area: banner;
-}
-
-.diseno-subtitulo{
-    grid-area: diseno-subtitulo;
-}
-
-.form-mapa{
-    @include flexbox(row);
-    flex-wrap: wrap;
-    grid-area: form-mapa;
-    gap: 7em;
-    margin-bottom: 2em;
-}
-
-.formulario {
-    @include font-family ($color-letra-oscuro, medium);
-    padding-left: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    @include flexbox(column);
-    justify-content: center;
-    align-items: center;
-
-}
-
-.input {
-    width: 90%;
-    height: 2em;
-    margin: 0.5rem;
-    transition: height 3s, width 3s;      
-}
-.boton {
-    cursor: pointer;
-    background-color: $color-banner;
-    border-color: $color-banner;
-    &:hover {
-        @extend .boton;
-    }
-}
-
- .input:hover {
-    height: 2em;
-    width: 100%;
-    border: solid 1px black;
- }
-
-@media (min-width: 576px) and (max-width: 768px) {
-    .texto-hola{
-        align-self: center;
-
-    }
     .el-main-contacto {
+        display: grid;
+        background-size: 100%;
+        border: solid $color-banner;  
+        margin: 1em;
+        padding: 1.3em;
         grid-template-areas: "banner"
                             "diseno-subtitulo"
+                            "form-mapa"
                             "form-mapa";
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto; 
-        border: solid 5px #7b5d5e; 
-        flex-wrap: wrap;
-        @include flexbox(column);
-        align-content: center;              
-}
-    .diseno-subtitulo{
-        margin-left: 0%;
-       align-self: center;
+        grid-template-rows: auto auto auto auto;                    
+        .banner{
+            grid-area: banner;
+        }
+        .diseno-subtitulo{
+            grid-area: diseno-subtitulo;
+        }
+        .form-mapa{
+            @include flexbox(row);
+            flex-wrap: wrap;
+            grid-area: form-mapa;
+            gap: 7em;
+            margin-bottom: 2em;
+            .formulario {
+                @include font-family ($color-letra-oscuro, medium);
+                padding-left: 1em;
+                padding-top: 1em;
+                padding-bottom: 1em;
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+                @include flexbox(column);
+                justify-content: center;
+                align-items: center;
+                .input {
+                    width: 90%;
+                    height: 2em;
+                    margin: 0.5rem;
+                    transition: height 3s, width 3s;  
+                    &:hover {
+                        height: 2em;
+                        width: 100%;
+                        border: solid 1px black;
+                    }
+                }
+                .boton {
+                    cursor: pointer;
+                    background-color: $color-banner;
+                    border-color: $color-banner;
+                        &:hover {
+                            @extend .boton;
+                        }
+                }
+            }
+        }
     }
-    .formulario {
-        width: 100%;
-        margin: 0 auto;
-        justify-content: center;
-        align-items: center;
-}
-    .boton {
-        align-content: center;
+    @media (min-width: 576px) and (max-width: 768px) {
+        .texto-hola{
+            align-self: center;
+        }
+        .el-main-contacto {
+            grid-template-areas:"banner"
+                                "diseno-subtitulo"
+                                "form-mapa";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto; 
+            border: solid 5px $color-banner; 
+            flex-wrap: wrap;
+            @include flexbox(column);
+            align-content: center;          
+            .diseno-subtitulo {
+                margin-left: 0%;
+                align-self: center;
+            }
+            .formulario {
+                width: 100%;
+                margin: 0 auto;
+                justify-content: center;
+                align-items: center;
+            }
+            .boton {
+                align-content: center;
+            }
+        }
     }
 }
 
