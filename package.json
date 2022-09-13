@@ -1,7 +1,7 @@
 {
-  "name": "proyecto",
+  "name": "Proyecto",
   "version": "1.0.0",
-  "description": "Proyecto",
+  "description": "Proyecto para el curso de Desarrollo Web de Coderhouse, en el que se desarrollará un sitio web para el departamento en alquiler temporal llamado 'Espacio Deheza'. Se utilizan imágenes y otros contenidos multimedia de carácter ficticio",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

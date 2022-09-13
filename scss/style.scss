@@ -289,15 +289,24 @@ main{
             grid-area: card-cba;
             @include flexbox(column);
             padding: 5%;
-        }
-        .card-cba .imagen-cba{
-            margin-bottom:2em;
-        }
-        .card-cba .texto-cordoba {
-            @extend .texto-departamento;
-            grid-area: texto-cordoba;
-            border: solid $color-header-footer;
-            padding: 1.5rem;
+            #carouselExampleCaptions {
+                .carousel-inner {
+                    .carousel-item {
+                        .carousel-caption{
+                            color: black;
+                            background-color: #F8FAFF;
+                            background-position-x: left;
+                        }
+                    }
+                }
+            }
+            .texto-cordoba{
+                text-align: center;
+                font-weight: 600;
+                border: solid 3px $color-header-footer;
+                margin-top: 5em;
+                padding: 1rem;
+            }
         }
     }
 /*/ Small devices (landscape phones, 576px and up)*/
@@ -327,13 +336,13 @@ main{
         grid-template-rows: auto auto auto;
         grid-template-areas:"banner banner"
                             "diseno-subtitulo diseno-subtitulo"   
-                            "texto-estadia texto-estadia";
+                            "cards-estadia cards-estadia";
         row-gap: 1.5em;
         border: solid $color-banner;  
         margin-top: $margen/10;
         margin-bottom: $margen/10;
         margin: 1em;
-        padding: 1.3em; 
+        padding: 1.3em;
         @include flexbox(column);
         .banner{
             grid-area: banner;
@@ -342,14 +351,44 @@ main{
             grid-area: diseno-subtitulo;
         }
         .texto-estadia{
-            grid-area: texto-estadia;
+            text-align: center;
+            font-weight: 600;
+            border:solid 3px $color-header-footer;
+            padding: 1rem;
+        }
+        .cards-estadia{
+            grid-area: cards-estadia;
             @include font-family (black, medium);
-            border: solid black;
             padding: 15px 15px 15px 15px;
             margin-left: 5px;
             margin-right: 15px;
             margin-top: 15px;
             margin-bottom: 45px;
+            align-self: center;
+            text-align: center;
+            .card{
+                .card-body-estadias{
+                    text-align: center;
+                    .texto {
+                        font-weight: 400;
+                    }
+                }
+            }
+            .card-dos{
+                div{
+                    .card-title{
+                        align-self: center;
+                        @include font-family (white, 10px);
+                        padding-top: 1rem;
+                        .boton-estadia {
+                            &:hover {
+                            background-color: $color-banner;
+                            border-color: $color-banner;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -369,6 +408,9 @@ main{
             border: solid 5px $color-banner;  
         }   
         .diseno-subtitulo{
+            align-self: center;
+        }
+        .cards-estadia {
             align-self: center;
         }
     }
