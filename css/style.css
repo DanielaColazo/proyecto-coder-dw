@@ -179,12 +179,18 @@ body {
         flex-direction: column;
         justify-content: center;
         align-self: center; }
-    body footer p {
-      display: flex;
-      flex-direction: column; }
-    body footer .flex-footer {
-      display: flex;
-      flex-direction: column; } }
+    body footer {
+      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto; }
+      body footer p {
+        grid-area: p;
+        display: flex;
+        flex-direction: column; }
+      body footer .flex-footer {
+        grid-area: flex-footer;
+        display: flex;
+        flex-direction: column; } }
 
 /*Desarrollo html Dpto*/
 body {

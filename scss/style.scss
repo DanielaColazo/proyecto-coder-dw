@@ -252,10 +252,16 @@ body {
             }
         }
         footer {
+        grid-template-areas:"p flex-footer" 
+                            "p flex-footer";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
             p {
+                grid-area: p;
                 @include flexbox (column);
             }
             .flex-footer{
+                grid-area: flex-footer;
                 @include flexbox (column);
             }
         }
