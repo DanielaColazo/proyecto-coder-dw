@@ -3,173 +3,108 @@
   padding: 0;
   box-sizing: border-box; }
 
-header {
-  position: sticky;
-  margin: .9em; }
-  header nav {
-    background-color: #acba9d; }
-    header nav div .diseno-titulo {
-      margin-left: 10px;
-      margin-top: 10px;
-      margin-bottom: 20px; }
-    header nav div a {
-      text-decoration: none;
+/*INDEX*/
+body {
+  /*MEDIA QUERIES INDEX*/
+  /*Small devices (576 a 768px)*/
+  /*/ Extra small devices */ }
+  body header {
+    position: sticky;
+    margin: .9em; }
+    body header nav {
+      background-color: #acba9d; }
+      body header nav div .diseno-titulo {
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px; }
+      body header nav div a {
+        text-decoration: none;
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 300;
+        color: #2e3532;
+        font-size: 33.33333px; }
+        body header nav div a:hover {
+          color: white; }
+      body header nav .color-icono {
+        background-color: #F8FAFF;
+        border: solid #F8FAFF; }
+    body header div div .navbar-nav a {
       font-family: 'Urbanist', sans-serif;
-      font-weight: 300;
-      color: #2e3532;
-      font-size: 33.33333px; }
-      header nav div a:hover {
-        color: white; }
-    header nav .color-icono {
-      background-color: #F8FAFF;
-      border: solid #F8FAFF; }
-  header div div .navbar-nav a {
+      font-weight: bold, 600; }
+      body header div div .navbar-nav a:hover {
+        color: #2e3532; }
+    body header div div .navbar-nav .color-nav {
+      color: white; }
+  body main {
+    display: grid;
+    grid-template-areas: "banner banner banner"  "el-subtitulo el-subtitulo el-subtitulo" "carousel carousel carousel" "las-cards las-cards las-cards";
+    grid-template-columns: 33% 33% 34%;
+    grid-template-rows: auto auto auto auto;
+    border: solid #292929;
+    margin: 1em;
+    padding: 1.3em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
     font-family: 'Urbanist', sans-serif;
-    font-weight: bold, 600; }
-    header div div .navbar-nav a:hover {
-      color: #2e3532; }
-  header div div .navbar-nav .color-nav {
-    color: white; }
+    font-weight: 300;
+    color: #2e3532;
+    font-size: medium; }
+    body main .banner {
+      grid-area: banner;
+      background-color: #292929;
+      padding: 2.1em;
+      margin-top: .8em;
+      height: 7em; }
+      body main .banner .texto-hola {
+        font-family: 'Paytone One', sans-serif;
+        color: whitesmoke;
+        font-size: 25px;
+        text-align: center;
+        animation: focus-in-expand 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation-name: focus-in-expand; }
 
-main {
-  background-color: #F8FAFF;
-  display: grid;
-  grid-template-areas: "banner banner banner"  "el-subtitulo el-subtitulo el-subtitulo" "carousel carousel carousel" "las-cards las-cards las-cards";
-  grid-template-columns: 33% 33% 34%;
-  grid-template-rows: auto auto auto auto;
-  border: solid #7b5d5e;
-  margin: 1em;
-  padding: 1.3em;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Urbanist', sans-serif;
-  font-weight: 300;
-  color: #2e3532;
-  font-size: medium; }
-  main .banner {
-    grid-area: banner;
-    background-color: #7b5d5e;
-    padding: 2.1em;
-    margin-top: .8em;
-    height: 7em; }
-    main .banner .texto-hola {
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    filter: blur(12px);
+    opacity: 0; }
+  100% {
+    filter: blur(0px);
+    opacity: 1; } }
+    body main h2 {
       font-family: 'Urbanist', sans-serif;
       font-weight: 300;
       color: #2e3532;
       font-size: 25px;
-      text-align: center; }
-  main h2 {
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 300;
-    color: #2e3532;
-    font-size: 25px;
-    grid-area: el-subtitulo;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-left: 1rem;
-    margin-bottom: 2rem;
-    padding-top: 1rem; }
-  main .carousel {
-    grid-area: carousel; }
-  main .las-cards .card div h5 {
-    font-family: 'Urbanist', sans-serif;
-    font-weight: bold, 600; }
-    main .las-cards .card div h5 a {
-      height: 40px;
-      width: 150px;
-      background-color: #f5d164;
-      border-color: #f5d164;
-      transition: ease-in 1s;
-      color: #2e3532;
-      font-weight: bolder; }
-      main .las-cards .card div h5 a:hover {
-        background-color: #f8c630b6;
-        border-color: #f8c630b6;
-        transform: scale(1.1); }
-
-footer {
-  background-color: #acba9d;
-  width: cover;
-  height: 50px;
-  margin: .9em;
-  padding-left: 10px;
-  padding-right: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-  footer p {
-    font-family: 'Urbanist', sans-serif;
-    font-weight: bolder;
-    font-size: 14.28571px;
-    color: #2e3532; }
-  footer ul {
-    font-family: 'Urbanist', sans-serif;
-    font-weight: bolder;
-    font-size: 14.28571px; }
-    footer ul li {
-      display: inline-flex; }
-      footer ul li a:link, footer ul li a:visited, footer ul li a:active {
-        text-decoration: none;
-        cursor: pointer; }
-      footer ul li a {
-        color: #2e3532; }
-        footer ul li a:hover {
-          color: white; }
-
-/*MEDIA QUERIES INDEX*/
-/*/ Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) and (max-width: 768px) {
-  .main-grid {
-    grid-template-areas: "banner"  "el-subtitulo" "carousel" "las-cards";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    border: solid 5px  #7b5d5e; }
-    .main-grid .el-subtitulo {
-      font-size: 1.2rem;
-      text-align: center; }
-    .main-grid .banner .texto-hola {
-      font-size: 1.5rem;
-      text-align: center; }
-    .main-grid .las-cards {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-content: center; } }
-
-/*Desarrollo html Dpto*/
-.body {
-  /*MEDIA QUERIES*/
-  /*/ Small devices (landscape phones, 576px and up)*/ }
-  .body .dpto-main-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas: "banner banner" "diseno-subtitulo diseno-subtitulo"    "carousel carousel" "texto-departamento texto-departamento";
-    border: solid #7b5d5e;
-    margin: 1em;
-    padding: 1.3em;
-    row-gap: 1.5em;
-    padding: 1.5em;
-    display: flex;
-    flex-direction: column; }
-    .body .dpto-main-grid .banner {
-      grid-area: banner; }
-    .body .dpto-main-grid .diseno-subtitulo {
-      grid-area: diseno-subtitulo; }
-    .body .dpto-main-grid .carousel {
+      grid-area: el-subtitulo;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      margin-left: 1rem;
+      margin-bottom: 2rem;
+      padding-top: 1rem; }
+    body main .carousel {
       grid-area: carousel; }
-    .body .dpto-main-grid .texto-departamento {
-      grid-area: texto-departamento;
+    body main .las-cards .card div h5 {
       font-family: 'Urbanist', sans-serif;
-      font-weight: 300;
-      color: black;
-      font-size: 300;
-      justify-content: center;
-      border: solid #2E3532;
-      padding: 3%; }
-  .body footer {
+      font-weight: 300; }
+      body main .las-cards .card div h5 a {
+        height: 40px;
+        width: 150px;
+        background-color: white;
+        border-color: white;
+        transition: ease-in 1s;
+        color: #2e3532;
+        font-weight: boldr; }
+        body main .las-cards .card div h5 a:hover {
+          background-color: white;
+          border-color: solid 2px white;
+          transform: scale(1.1); }
+    body main .las-cards .card div .card-text {
+      font-weight: 600;
+      padding: 1rem; }
+  body footer {
     background-color: #acba9d;
     width: cover;
     height: 50px;
@@ -179,221 +114,370 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
-    .body footer p {
+    body footer p {
       font-family: 'Urbanist', sans-serif;
       font-weight: bolder;
       font-size: 14.28571px;
       color: #2e3532; }
-    .body footer ul {
+    body footer ul {
       font-family: 'Urbanist', sans-serif;
       font-weight: bolder;
       font-size: 14.28571px; }
-      .body footer ul li {
+      body footer ul li {
         display: inline-flex; }
-        .body footer ul li a:link, .body footer ul li a:visited, .body footer ul li a:active {
+        body footer ul li a:link, body footer ul li a:visited, body footer ul li a:active {
           text-decoration: none;
           cursor: pointer; }
-        .body footer ul li a {
+        body footer ul li a {
           color: #2e3532; }
-          .body footer ul li a:hover {
+          body footer ul li a:hover {
             color: white; }
   @media (min-width: 576px) and (max-width: 768px) {
-    .body .dpto-main-grid {
+    body header .navbar .container-fluid .botoncito {
+      margin-right: 3em; }
+    body header .navbar .container-fluid div .menu {
+      align-items: flex-end;
+      margin-right: 3em; }
+    body .main-grid {
+      grid-template-areas: "banner"  "el-subtitulo" "carousel" "las-cards";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto; }
+      body .main-grid .banner {
+        align-items: center; }
+        body .main-grid .banner .texto-hola {
+          font-size: 1.2rem;
+          text-align: center; }
+      body .main-grid h2 {
+        font-size: 1.2rem;
+        text-align: center; }
+      body .main-grid .las-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center; }
+    body footer p {
+      display: flex;
+      flex-direction: column; } }
+  @media (min-width: 300px) and (max-width: 576px) {
+    body header .navbar .container-fluid {
+      display: flex;
+      flex-direction: column;
+      margin-left: 3em;
+      align-items: flex-start; }
+    body .main-grid {
+      grid-template-areas: "banner"  "el-subtitulo" "carousel" "las-cards";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto; }
+      body .main-grid div .banner p .texto-hola {
+        font-size: 1.5rem;
+        padding-left: 3rem; }
+      body .main-grid h2 {
+        font-size: 1rem;
+        text-align: center; }
+      body .main-grid .las-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center; }
+    body footer p {
+      display: flex;
+      flex-direction: column; }
+    body footer .flex-footer {
+      display: flex;
+      flex-direction: column; } }
+
+/*Desarrollo html Dpto*/
+body {
+  /*MEDIA QUERIES DPTO*/
+  /*/ Small devices (landscape phones, 576px and up)*/
+  /*/ Extra small devices */ }
+  body header nav div .diseno-titulo a {
+    text-decoration: none;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 300;
+    color: #2e3532;
+    font-size: 33.33333px; }
+    body header nav div .diseno-titulo a:hover {
+      color: white; }
+  body .dpto-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "banner banner" "diseno-subtitulo diseno-subtitulo"    "carousel carousel" "texto-departamento texto-departamento";
+    border: solid #292929;
+    margin: 1em;
+    padding: 1.3em;
+    row-gap: 1.5em;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column; }
+    body .dpto-main-grid .banner {
+      grid-area: banner; }
+    body .dpto-main-grid .diseno-subtitulo {
+      grid-area: diseno-subtitulo; }
+    body .dpto-main-grid .carousel {
+      grid-area: carousel; }
+    body .dpto-main-grid .texto-departamento {
+      grid-area: texto-departamento;
+      font-family: 'Urbanist', sans-serif;
+      font-weight: 300;
+      color: black;
+      font-size: 300;
+      justify-content: center;
+      border: solid #2E3532;
+      padding: 3%; }
+  body footer {
+    background-color: #acba9d;
+    width: cover;
+    height: 50px;
+    margin: .9em;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    body footer p {
+      font-family: 'Urbanist', sans-serif;
+      font-weight: bolder;
+      font-size: 14.28571px;
+      color: #2e3532; }
+    body footer ul {
+      font-family: 'Urbanist', sans-serif;
+      font-weight: bolder;
+      font-size: 14.28571px; }
+      body footer ul li {
+        display: inline-flex; }
+        body footer ul li a:link, body footer ul li a:visited, body footer ul li a:active {
+          text-decoration: none;
+          cursor: pointer; }
+        body footer ul li a {
+          color: #2e3532; }
+          body footer ul li a:hover {
+            color: white; }
+  @media (min-width: 576px) and (max-width: 768px) {
+    body .dpto-main-grid {
       grid-template-areas: "banner"  "diseno-subtitulo" "carousel" "texto-departamento";
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto auto;
-      border: solid 5px  #7b5d5e;
       gap: 2em; }
-    .body .diseno-subtitulo {
-      align-self: center; } }
+    body .texto-hola {
+      font-size: 1.5rem;
+      text-align: center; }
+    body h2 {
+      font-size: 1.2rem;
+      text-align: center; }
+    body p .texto-departamento {
+      width: 70%; }
+    body footer p {
+      display: flex;
+      flex-direction: column; } }
+  @media (min-width: 300px) and (max-width: 576px) {
+    body .dpto-main-grid {
+      grid-template-areas: "banner"  "diseno-subtitulo" "carousel" "texto-departamento";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+      gap: 2em; }
+    body h2 {
+      font-size: 1rem;
+      text-align: center; }
+    body p {
+      width: 70%;
+      align-self: center; }
+    body footer p {
+      display: flex;
+      flex-direction: column; } }
 
 /*Desarrollo html Cordoba*/
-.body {
-  /*/ Small devices (landscape phones, 576px and up)*/ }
-  .body .el-main-cba {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "banner banner" "diseno-subtitulo diseno-subtitulo"    "card-cba card-cba";
-    border: solid #7b5d5e;
-    margin: 1em;
-    padding: 1.3em;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.el-main-cba {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "banner banner" "diseno-subtitulo diseno-subtitulo"    "card-cba card-cba";
+  border: solid #292929;
+  margin: 1em;
+  padding: 1.3em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 300;
+  color: black;
+  font-size: medium; }
+  .el-main-cba .banner {
+    grid-area: banner; }
+  .el-main-cba .diseno-subtitulo {
+    padding-left: 2rem; }
+  .el-main-cba .card-cba {
+    grid-area: card-cba;
     display: flex;
     flex-direction: column;
+    padding: 2%; }
+    .el-main-cba .card-cba #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption {
+      color: black;
+      background-color: #F8FAFF;
+      background-position-x: left; }
+    .el-main-cba .card-cba .texto-cordoba {
+      text-align: center;
+      font-weight: 600;
+      border: solid 3px #acba9d;
+      margin-top: 5em;
+      padding: 1rem; }
+
+/*/ Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 768px) {
+  .el-main-cba {
+    border: solid 5px #7b5d5e;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "banner" "diseno-subtitulo"    "card-cba";
+    gap: 3em;
     font-family: 'Urbanist', sans-serif;
     font-weight: 300;
     color: black;
     font-size: medium; }
-    .body .el-main-cba .banner {
-      grid-area: banner; }
-    .body .el-main-cba .card-cba {
-      grid-area: card-cba;
-      display: flex;
-      flex-direction: column;
-      padding: 5%; }
-      .body .el-main-cba .card-cba #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption {
-        color: black;
-        background-color: #F8FAFF;
-        background-position-x: left; }
-      .body .el-main-cba .card-cba .texto-cordoba {
-        text-align: center;
-        font-weight: 600;
-        border: solid 3px #acba9d;
-        margin-top: 5em;
-        padding: 1rem; }
-  @media (min-width: 576px) and (max-width: 768px) {
-    .body .el-main-cba {
-      border: solid 5px #7b5d5e;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto;
-      grid-template-areas: "banner" "diseno-subtitulo"    "card-cba";
-      gap: 3em;
-      font-family: 'Urbanist', sans-serif;
-      font-weight: 300;
-      color: black;
-      font-size: medium; }
-    .body .diseno-subtitulo {
-      align-self: center; } }
+  .diseno-subtitulo {
+    align-self: center; } }
 
 /*Desarrollo html Estadias*/
-.body .estadias-main {
+.estadias-main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "banner banner" "diseno-subtitulo diseno-subtitulo"    "cards-estadia cards-estadia";
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "banner banner" "diseno-subtitulo diseno-subtitulo"    "texto-estadia texto-estadia" "cards-estadia cards-estadia";
   row-gap: 1.5em;
-  border: solid #7b5d5e;
+  border: solid #292929;
   margin-top: 10px;
   margin-bottom: 10px;
   margin: 1em;
   padding: 1.3em;
   display: flex;
   flex-direction: column; }
-  .body .estadias-main .banner {
+  .estadias-main .banner {
     grid-area: banner; }
-  .body .estadias-main .diseno-subtitulo {
+  .estadias-main .diseno-subtitulo {
     grid-area: diseno-subtitulo; }
-  .body .estadias-main .texto-estadia {
-    text-align: center;
-    font-weight: 600;
-    border: solid 3px #acba9d;
-    padding: 1rem; }
-  .body .estadias-main .cards-estadia {
-    grid-area: cards-estadia;
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 300;
-    color: black;
-    font-size: medium;
-    padding: 15px 15px 15px 15px;
-    margin-left: 5px;
-    margin-right: 15px;
-    margin-top: 15px;
-    margin-bottom: 45px;
-    align-self: center;
-    text-align: center; }
-    .body .estadias-main .cards-estadia .card .card-body-estadias {
-      text-align: center; }
-      .body .estadias-main .cards-estadia .card .card-body-estadias .texto {
-        font-weight: 400; }
-    .body .estadias-main .cards-estadia .card-dos div .card-title {
-      align-self: center;
+  .estadias-main .estadia-bloque {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; }
+    .estadias-main .estadia-bloque .texto-estadia {
+      grid-area: texto-estadia;
+      width: 40em;
+      height: 15em;
+      text-align: center;
+      font-weight: 600;
+      border: solid 3px #acba9d;
+      border-radius: 0.5;
+      margin-top: 3.5em;
+      padding: 1rem;
+      background-color: whitesmoke; }
+    .estadias-main .estadia-bloque .cards-estadia {
+      grid-area: cards-estadia;
       font-family: 'Urbanist', sans-serif;
       font-weight: 300;
-      color: white;
-      font-size: 10px;
-      padding-top: 1rem; }
-      .body .estadias-main .cards-estadia .card-dos div .card-title .boton-estadia:hover {
-        background-color: #7b5d5e;
-        border-color: #7b5d5e; }
+      color: black;
+      font-size: medium;
+      align-self: center;
+      text-align: center; }
+      .estadias-main .estadia-bloque .cards-estadia .card .card-body-estadias {
+        text-align: center; }
+        .estadias-main .estadia-bloque .cards-estadia .card .card-body-estadias .texto {
+          font-weight: 400; }
+      .estadias-main .estadia-bloque .cards-estadia .card-dos div .card-title {
+        align-self: center;
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 300;
+        color: white;
+        font-size: 10px;
+        padding-top: 1rem; }
+        .estadias-main .estadia-bloque .cards-estadia .card-dos div .card-title .boton-estadia:hover {
+          background-color: #292929;
+          border-color: #292929; }
 
-.body footer {
+footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 22vh; }
 
 @media (min-width: 576px) and (max-width: 768px) {
-  .body .estadias-main {
+  .estadias-main {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas: "banner" "diseno-subtitulo"    "texto-estadia";
-    border: solid 5px #7b5d5e; }
-  .body .diseno-subtitulo {
+    border: solid 5px #292929; }
+  .diseno-subtitulo {
     align-self: center; }
-  .body .cards-estadia {
+  .cards-estadia {
     align-self: center; } }
 
 /*Desarrollo html Contacto*/
-.body .el-main-contacto {
+body .el-main-contacto {
   display: grid;
   background-size: 100%;
-  border: solid #7b5d5e;
+  border: solid #292929;
   margin: 1em;
   padding: 1.3em;
   grid-template-areas: "banner" "diseno-subtitulo" "form-mapa" "form-mapa";
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto; }
-  .body .el-main-contacto .banner {
+  body .el-main-contacto .banner {
     grid-area: banner; }
-  .body .el-main-contacto .diseno-subtitulo {
-    grid-area: diseno-subtitulo; }
-  .body .el-main-contacto .form-mapa {
+  body .el-main-contacto .diseno-subtitulo {
+    grid-area: diseno-subtitulo;
+    padding-left: 6em; }
+  body .el-main-contacto .form-mapa {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     grid-area: form-mapa;
-    gap: 7em;
-    margin-bottom: 2em; }
-    .body .el-main-contacto .form-mapa .formulario {
+    gap: 4em;
+    margin-bottom: 2em;
+    justify-content: space-evenly; }
+    body .el-main-contacto .form-mapa .formulario {
       font-family: 'Urbanist', sans-serif;
       font-weight: 300;
       color: #2e3532;
       font-size: medium;
-      padding-left: 1em;
-      padding-top: 1em;
+      padding-top: 5em;
       padding-bottom: 1em;
       width: 100%;
       max-width: 600px;
       margin: 0 auto;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-      .body .el-main-contacto .form-mapa .formulario .input {
+      flex-direction: column; }
+      body .el-main-contacto .form-mapa .formulario .input {
         width: 90%;
         height: 2em;
         margin: 0.5rem;
         transition: height 3s, width 3s; }
-        .body .el-main-contacto .form-mapa .formulario .input:hover {
+        body .el-main-contacto .form-mapa .formulario .input:hover {
           height: 2em;
           width: 100%;
           border: solid 1px black; }
-      .body .el-main-contacto .form-mapa .formulario .boton, .body .el-main-contacto .form-mapa .formulario .boton:hover {
+      body .el-main-contacto .form-mapa .formulario .boton, body .el-main-contacto .form-mapa .formulario .boton:hover {
         cursor: pointer;
-        background-color: #7b5d5e;
-        border-color: #7b5d5e; }
+        background-color: #292929;
+        border-color: #292929; }
 
 @media (min-width: 576px) and (max-width: 768px) {
-  .body .texto-hola {
+  body .texto-hola {
     align-self: center; }
-  .body .el-main-contacto {
+  body .el-main-contacto {
     grid-template-areas: "banner" "diseno-subtitulo" "form-mapa";
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-    border: solid 5px #7b5d5e;
+    border: solid 5px #292929;
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
     align-content: center; }
-    .body .el-main-contacto .diseno-subtitulo {
+    body .el-main-contacto .diseno-subtitulo {
       margin-left: 0%;
       align-self: center; }
-    .body .el-main-contacto .formulario {
+    body .el-main-contacto .formulario {
       width: 100%;
       margin: 0 auto;
       justify-content: center;
-      align-items: center; }
-    .body .el-main-contacto .boton, .body .el-main-contacto .form-mapa .formulario .boton:hover {
-      align-content: center; } }
+      align-items: center; } }
