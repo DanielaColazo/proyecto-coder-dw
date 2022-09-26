@@ -6,8 +6,7 @@
 /*INDEX*/
 body {
   /*MEDIA QUERIES INDEX*/
-  /*Small devices (576 a 768px)*/
-  /*/ Extra small devices */ }
+  /*Small devices (300 a 768px)*/ }
   body header {
     position: sticky;
     margin: .9em; }
@@ -86,24 +85,29 @@ body {
       padding-top: 1rem; }
     body main .carousel {
       grid-area: carousel; }
-    body main .las-cards .card div h5 {
-      font-family: 'Urbanist', sans-serif;
-      font-weight: 300; }
-      body main .las-cards .card div h5 a {
-        height: 40px;
-        width: 150px;
-        background-color: white;
-        border-color: white;
-        transition: ease-in 1s;
-        color: #2e3532;
-        font-weight: boldr; }
-        body main .las-cards .card div h5 a:hover {
+    body main .las-cards .card .card-body {
+      height: 7rem;
+      text-align: center; }
+      body main .las-cards .card .card-body h5 {
+        font-family: 'Urbanist', sans-serif;
+        font-weight: bold 600; }
+        body main .las-cards .card .card-body h5 a {
+          height: 40px;
+          width: 150px;
           background-color: white;
-          border-color: solid 2px white;
-          transform: scale(1.1); }
-    body main .las-cards .card div .card-text {
-      font-weight: 600;
-      padding: 1rem; }
+          border-color: white;
+          transition: ease-in 1s;
+          color: #2e3532;
+          font-weight: bolder; }
+          body main .las-cards .card .card-body h5 a:hover {
+            background-color: white;
+            border-color: solid 2px white;
+            transform: scale(1.1); }
+      body main .las-cards .card .card-body .card-text {
+        font-weight: 300;
+        padding-bottom: 3rem;
+        padding-right: 1.5rem;
+        text-align: center; }
   body footer {
     background-color: #acba9d;
     width: cover;
@@ -132,7 +136,7 @@ body {
           color: #2e3532; }
           body footer ul li a:hover {
             color: white; }
-  @media (min-width: 576px) and (max-width: 768px) {
+  @media (min-width: 300px) and (max-width: 768px) {
     body header .navbar .container-fluid .botoncito {
       margin-right: 3em; }
     body header .navbar .container-fluid div .menu {
@@ -153,32 +157,10 @@ body {
       body .main-grid .las-cards {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-self: center; }
-    body footer p {
-      display: flex;
-      flex-direction: column; } }
-  @media (min-width: 300px) and (max-width: 576px) {
-    body header .navbar .container-fluid {
-      display: flex;
-      flex-direction: column;
-      margin-left: 3em;
-      align-items: flex-start; }
-    body .main-grid {
-      grid-template-areas: "banner"  "el-subtitulo" "carousel" "las-cards";
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto auto; }
-      body .main-grid div .banner p .texto-hola {
-        font-size: 1.5rem;
-        padding-left: 3rem; }
-      body .main-grid h2 {
-        font-size: 1rem;
-        text-align: center; }
-      body .main-grid .las-cards {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-self: center; }
+        body .main-grid .las-cards .card-body .card-text {
+          display: inline; }
     body footer {
       grid-template-areas: "p flex-footer"  "p flex-footer";
       grid-template-columns: 1fr 1fr;

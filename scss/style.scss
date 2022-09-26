@@ -103,10 +103,12 @@ body {
             }
         .las-cards {
             .card {
-                div {
+                .card-body {
+                    height:7rem;
+                    text-align: center;
                     h5 {
                         font-family: 'Urbanist', sans-serif;
-                        font-weight: 300;
+                        font-weight: bold 600;
                         a {
                             height: $margen/2.5;
                             width: $margen*1.5;
@@ -114,7 +116,7 @@ body {
                             border-color: map-get($mapa , $key:color-boton-card );
                             transition: ease-in 1s;
                             color: $color-letra-oscuro;
-                            font-weight: boldr;
+                            font-weight: bolder;
                             &:hover {
                                 background-color: map-get($mapa , $key:color-boton-hover );
                                 border-color:solid 2px map-get($mapa , $key:color-boton-hover );
@@ -122,14 +124,16 @@ body {
                                 }
                             }
                         }
-                        .card-text {
-                            font-weight: 600;
-                            padding: 1rem;
-                        }
+                    .card-text {
+                        font-weight: 300;
+                        padding-bottom: 3rem;
+                        padding-right: 1.5rem;
+                        text-align: center;
                     }
                 }
             }
         }
+    }
         
     footer {
         background-color: $color-header-footer;
@@ -170,8 +174,8 @@ body {
 
  /*MEDIA QUERIES INDEX*/
 
-    /*Small devices (576 a 768px)*/
-     @media (min-width: 576px) and (max-width: 768px){
+    /*Small devices (300 a 768px)*/
+     @media (min-width: 300px) and (max-width: 768px){
         header{
             .navbar{
                 .container-fluid{
@@ -207,50 +211,15 @@ body {
             }
             .las-cards {
             @include flexbox(column);
-            justify-content: center;
+            justify-content: space-between;
             align-self: center;
-            }
-        }
-        footer {
-            p {
-                @include flexbox (column);
-            }
-    }
-}
-         /*/ Extra small devices */
-     @media (min-width: 300px) and (max-width: 576px){
-        header{
-            .navbar{
-                .container-fluid{
-                    @include flexbox (column);
-                    margin-left: 3em;
-                    align-items: flex-start;
-            }
-        }
-    }
-        .main-grid {
-            grid-template-areas: "banner" 
-                                "el-subtitulo"
-                                "carousel"
-                                "las-cards";
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto auto auto;
-            div .banner{
-                p .texto-hola{
-                    font-size: 1.5rem;
-                    padding-left: 3rem;
+            .card-body{
+                .card-text{
+                    display: inline;
                 }
             }
-            h2 {
-                font-size: 1rem;
-                text-align: center;
-            }
-            .las-cards {
-            @include flexbox(column);
-            justify-content: center;
-            align-self: center;
-            }
         }
+    }
         footer {
         grid-template-areas:"p flex-footer" 
                             "p flex-footer";
@@ -266,7 +235,9 @@ body {
             }
         }
     }
-}      
+}
+    
+      
  /*Desarrollo html Dpto*/
 body {    
     header{
