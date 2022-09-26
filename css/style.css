@@ -6,7 +6,7 @@
 /*INDEX*/
 body {
   /*MEDIA QUERIES INDEX*/
-  /*Small devices (300 a 768px)*/ }
+  /*Small devices (576 a 768px)*/ }
   body header {
     position: sticky;
     margin: .9em; }
@@ -136,11 +136,11 @@ body {
           color: #2e3532; }
           body footer ul li a:hover {
             color: white; }
-  @media (min-width: 300px) and (max-width: 768px) {
+  @media (min-width: 576px) and (max-width: 768px) {
     body header .navbar .container-fluid .botoncito {
       margin-right: 3em; }
     body header .navbar .container-fluid div .menu {
-      align-items: flex-end;
+      align-items: flex-start;
       margin-right: 3em; }
     body .main-grid {
       grid-template-areas: "banner"  "el-subtitulo" "carousel" "las-cards";
@@ -177,8 +177,7 @@ body {
 /*Desarrollo html Dpto*/
 body {
   /*MEDIA QUERIES DPTO*/
-  /*/ Small devices (landscape phones, 576px and up)*/
-  /*/ Extra small devices */ }
+  /*/ Small devices (landscape phones, 576px and up)*/ }
   body header nav div .diseno-titulo a {
     text-decoration: none;
     font-family: 'Urbanist', sans-serif;
@@ -256,21 +255,6 @@ body {
       text-align: center; }
     body p .texto-departamento {
       width: 70%; }
-    body footer p {
-      display: flex;
-      flex-direction: column; } }
-  @media (min-width: 300px) and (max-width: 576px) {
-    body .dpto-main-grid {
-      grid-template-areas: "banner"  "diseno-subtitulo" "carousel" "texto-departamento";
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto auto;
-      gap: 2em; }
-    body h2 {
-      font-size: 1rem;
-      text-align: center; }
-    body p {
-      width: 70%;
-      align-self: center; }
     body footer p {
       display: flex;
       flex-direction: column; } }

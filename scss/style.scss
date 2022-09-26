@@ -174,8 +174,8 @@ body {
 
  /*MEDIA QUERIES INDEX*/
 
-    /*Small devices (300 a 768px)*/
-     @media (min-width: 300px) and (max-width: 768px){
+    /*Small devices (576 a 768px)*/
+     @media (min-width: 576px) and (max-width: 768px){
         header{
             .navbar{
                 .container-fluid{
@@ -184,7 +184,7 @@ body {
                     }
                     div{
                         .menu{
-                            align-items: flex-end;
+                            align-items: flex-start;
                             margin-right: 3em;
                         }
                     }
@@ -350,31 +350,6 @@ body {
             }
     }
 }
-     /*/ Extra small devices */
-    @media (min-width: 300px) and (max-width: 576px){
-        .dpto-main-grid {
-            grid-template-areas: "banner" 
-                                "diseno-subtitulo"
-                                "carousel"
-                                "texto-departamento";
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto auto auto;
-            gap: 2em;
-            }   
-            h2 {
-                font-size: 1rem;
-                text-align: center;
-            }
-            p {
-            width: 70%;
-            align-self: center;
-            }
-            footer {
-                p {
-                    @include flexbox (column);
-                }
-        }
-    }
 }
 /*Desarrollo html Cordoba*/
 
