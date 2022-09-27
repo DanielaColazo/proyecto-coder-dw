@@ -5,13 +5,15 @@
 
 /*INDEX*/
 body {
+  background-color: #d4bcd6;
   /*MEDIA QUERIES INDEX*/
-  /*Small devices (576 a 768px)*/ }
+  /*Small devices (576 a 768px)*/
+  /*Extra Small devices (300 a 578px)*/ }
   body header {
     position: sticky;
     margin: .9em; }
     body header nav {
-      background-color: #acba9d; }
+      background-color: #a0b986; }
       body header nav div .diseno-titulo {
         margin-left: 20px;
         margin-top: 10px;
@@ -39,7 +41,7 @@ body {
     grid-template-areas: "banner banner banner"  "el-subtitulo el-subtitulo el-subtitulo" "carousel carousel carousel" "las-cards las-cards las-cards";
     grid-template-columns: 33% 33% 34%;
     grid-template-rows: auto auto auto auto;
-    border: solid #292929;
+    border: solid 5px #2e3532;
     margin: 1em;
     padding: 1.3em;
     margin-top: 10px;
@@ -52,26 +54,11 @@ body {
     font-size: medium; }
     body main .banner {
       grid-area: banner;
-      background-color: #292929;
-      padding: 2.1em;
-      margin-top: .8em;
+      background-image: url(../images/02.jpg);
+      background-position: center center;
+      justify-content: space-around;
+      padding-bottom: 5%;
       height: 7em; }
-      body main .banner .texto-hola {
-        font-family: 'Paytone One', sans-serif;
-        color: whitesmoke;
-        font-size: 25px;
-        text-align: center;
-        animation: focus-in-expand 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-        animation-name: focus-in-expand; }
-
-@keyframes focus-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    filter: blur(12px);
-    opacity: 0; }
-  100% {
-    filter: blur(0px);
-    opacity: 1; } }
     body main h2 {
       font-family: 'Urbanist', sans-serif;
       font-weight: 300;
@@ -85,31 +72,186 @@ body {
       padding-top: 1rem; }
     body main .carousel {
       grid-area: carousel; }
-    body main .las-cards .card .card-body {
-      height: 7rem;
-      text-align: center; }
-      body main .las-cards .card .card-body h5 {
-        font-family: 'Urbanist', sans-serif;
-        font-weight: bold 600; }
-        body main .las-cards .card .card-body h5 a {
-          height: 40px;
-          width: 150px;
-          background-color: white;
-          border-color: white;
-          transition: ease-in 1s;
-          color: #2e3532;
-          font-weight: bolder; }
-          body main .las-cards .card .card-body h5 a:hover {
-            background-color: white;
-            border-color: solid 2px white;
-            transform: scale(1.1); }
-      body main .las-cards .card .card-body .card-text {
-        font-weight: 300;
-        padding-bottom: 3rem;
-        padding-right: 1.5rem;
+    body main .las-cards .card {
+      background-color: #d7d4d4; }
+      body main .las-cards .card .card-img-top {
+        height: 180px; }
+      body main .las-cards .card .card-body {
+        height: 7rem;
         text-align: center; }
+        body main .las-cards .card .card-body h5 {
+          font-family: 'Urbanist', sans-serif;
+          font-weight: bold 600; }
+          body main .las-cards .card .card-body h5 a {
+            height: 40px;
+            width: 150px;
+            background-color: #f1a208;
+            border-color: #f1a208;
+            transition: ease-in 1s;
+            color: #2e3532;
+            font-weight: bolder; }
+            body main .las-cards .card .card-body h5 a:hover {
+              background-color: #f1a208;
+              border-color: solid 2px #f1a208;
+              transform: scale(1.1); }
+        body main .las-cards .card .card-body .card-text {
+          font-weight: 300;
+          padding-bottom: 3rem;
+          padding-right: 1.5rem;
+          text-align: center; }
   body footer {
-    background-color: #acba9d;
+    display: grid;
+    grid-template-areas: "p flex-footer";
+    grid-column: 1fr 1fr;
+    grid-row: auto;
+    background-color: #a0b986;
+    width: cover;
+    height: 50px;
+    margin: .9em;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    body footer p {
+      grid-area: p;
+      font-family: 'Urbanist', sans-serif;
+      font-weight: bolder;
+      font-size: 14.28571px;
+      color: #2e3532; }
+    body footer .flex-footer {
+      grid-area: flex-footer;
+      font-family: 'Urbanist', sans-serif;
+      font-weight: bolder;
+      font-size: 14.28571px; }
+      body footer .flex-footer li {
+        display: inline-flex; }
+        body footer .flex-footer li a:link, body footer .flex-footer li a:visited, body footer .flex-footer li a:active {
+          text-decoration: none;
+          cursor: pointer; }
+        body footer .flex-footer li a {
+          color: #2e3532; }
+          body footer .flex-footer li a:hover {
+            color: white; }
+  @media (min-width: 576px) and (max-width: 768px) {
+    body header .navbar .container-fluid .botoncito {
+      margin-right: 3em; }
+    body header .navbar .container-fluid div .menu {
+      align-items: flex-start;
+      margin-right: 3em; }
+    body .main-grid {
+      grid-template-areas: "banner"  "el-subtitulo" "carousel" "las-cards";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto; }
+      body .main-grid .banner {
+        width: 100%; }
+      body .main-grid h2 {
+        font-size: 1.2rem;
+        text-align: center; }
+      body .main-grid .las-cards {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-self: center;
+        gap: 2px; }
+        body .main-grid .las-cards .card-body .card-text {
+          display: inline; }
+    body footer {
+      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto; }
+      body footer p {
+        grid-area: p;
+        display: flex;
+        flex-direction: column; }
+      body footer .flex-footer {
+        grid-area: flex-footer;
+        display: flex;
+        flex-direction: column; } }
+  @media (min-width: 300px) and (max-width: 578px) {
+    body header .navbar .container-fluid .botoncito {
+      margin-right: 3em; }
+    body header .navbar .container-fluid div .menu {
+      align-items: flex-start;
+      margin-right: 3em; }
+    body .main-grid {
+      grid-template-areas: "banner"  "el-subtitulo" "carousel" "las-cards";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto; }
+      body .main-grid .banner {
+        justify-content: space-around;
+        height: 5rem; }
+      body .main-grid h2 {
+        font-size: 1.2rem;
+        text-align: center; }
+      body .main-grid .las-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-self: center; }
+        body .main-grid .las-cards .card-body .card-text {
+          display: inline; }
+    body footer {
+      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto; }
+      body footer p {
+        grid-area: p;
+        display: flex;
+        flex-direction: column; }
+      body footer .flex-footer {
+        grid-area: flex-footer;
+        display: flex;
+        flex-direction: column; } }
+
+/*DESARROLLO DPTO*/
+body {
+  background-color: #d4bcd6;
+  /*MEDIA QUERIES DEPARTAMENTO*/
+  /*Small devices (576 a 768px)*/
+  /*Extra Small devices (300 a 578px)*/ }
+  body header nav div .diseno-titulo a {
+    text-decoration: none;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 300;
+    color: #2e3532;
+    font-size: 33.33333px; }
+    body header nav div .diseno-titulo a:hover {
+      color: white; }
+  body .dpto-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "banner banner" "diseno-subtitulo diseno-subtitulo"    "carousel carousel" "texto-departamento texto-departamento";
+    border: solid 5px #2e3532;
+    margin: 1em;
+    padding: 1.3em;
+    row-gap: 1.5em;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column; }
+    body .dpto-main-grid .banner {
+      grid-area: banner; }
+    body .dpto-main-grid .diseno-subtitulo {
+      grid-area: diseno-subtitulo; }
+    body .dpto-main-grid .carousel {
+      grid-area: carousel; }
+    body .dpto-main-grid .texto-departamento {
+      grid-area: texto-departamento;
+      font-family: 'Urbanist', sans-serif;
+      font-weight: 300;
+      color: black;
+      font-size: 300;
+      justify-content: center;
+      border: solid #2E3532;
+      padding: 3%; }
+  body footer {
+    display: grid;
+    grid-template-areas: "p flex-footer";
+    grid-column: 1fr 1fr;
+    grid-row: auto;
+    background-color: #a0b986;
     width: cover;
     height: 50px;
     margin: .9em;
@@ -142,42 +284,179 @@ body {
     body header .navbar .container-fluid div .menu {
       align-items: flex-start;
       margin-right: 3em; }
-    body .main-grid {
-      grid-template-areas: "banner"  "el-subtitulo" "carousel" "las-cards";
+    body .dpto-main-grid {
+      display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto auto; }
-      body .main-grid .banner {
-        align-items: center; }
-        body .main-grid .banner .texto-hola {
-          font-size: 1.2rem;
-          text-align: center; }
-      body .main-grid h2 {
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: "banner" "diseno-subtitulo"    "carousel" "texto-departamento"; }
+      body .dpto-main-grid h2 {
         font-size: 1.2rem;
         text-align: center; }
-      body .main-grid .las-cards {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-self: center; }
-        body .main-grid .las-cards .card-body .card-text {
-          display: inline; }
     body footer {
       grid-template-areas: "p flex-footer"  "p flex-footer";
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto; }
       body footer p {
-        grid-area: p;
         display: flex;
         flex-direction: column; }
       body footer .flex-footer {
-        grid-area: flex-footer;
+        display: flex;
+        flex-direction: column; } }
+  @media (min-width: 300px) and (max-width: 578px) {
+    body header .navbar .container-fluid .botoncito {
+      margin-right: 3em; }
+    body header .navbar .container-fluid div .menu {
+      align-items: flex-start;
+      margin-right: 3em; }
+    body .dpto-main-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: "banner" "diseno-subtitulo"    "carousel" "texto-departamento"; }
+      body .dpto-main-grid h2 {
+        font-size: 1.2rem;
+        text-align: center; }
+    body footer {
+      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto; }
+      body footer p {
+        display: flex;
+        flex-direction: column; }
+      body footer .flex-footer {
         display: flex;
         flex-direction: column; } }
 
-/*Desarrollo html Dpto*/
+/*DESARROLLO CORDOBA*/
 body {
-  /*MEDIA QUERIES DPTO*/
-  /*/ Small devices (landscape phones, 576px and up)*/ }
+  background-color: #d4bcd6;
+  /*MEDIA QUERIES CORDOBA*/
+  /*Small devices (576 a 768px)*/
+  /*Extra Small devices (300 a 578px)*/ }
+  body .el-main-cba {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "banner banner" "diseno-subtitulo diseno-subtitulo"    "card-cba card-cba";
+    border: solid 5px #2e3532;
+    margin: 1em;
+    padding: 1.3em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #d4bcd6;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 300;
+    color: black;
+    font-size: medium; }
+    body .el-main-cba .banner {
+      grid-area: banner; }
+    body .el-main-cba h2 {
+      text-align: left; }
+    body .el-main-cba .card-cba {
+      grid-area: card-cba;
+      display: flex;
+      flex-direction: column;
+      padding: 2%; }
+      body .el-main-cba .card-cba .carousel .carousel-inner .carousel-item .card-img-top {
+        height: auto; }
+      body .el-main-cba .card-cba .carousel .carousel-inner .carousel-item .carousel-caption {
+        font-family: 'Paytone One', sans-serif;
+        font-weight: 600;
+        color: black; }
+      body .el-main-cba .card-cba .texto-cordoba {
+        border: solid 5px #F8FAFF;
+        width: 100%;
+        text-align: center;
+        border: solid 3px #2e3532;
+        margin-top: 5em;
+        padding: 1rem; }
+    body .el-main-cba footer {
+      display: grid;
+      grid-template-areas: "p flex-footer";
+      grid-column: 1fr 1fr;
+      grid-row: auto;
+      background-color: #a0b986;
+      width: cover;
+      height: 50px;
+      margin: .9em;
+      padding-left: 10px;
+      padding-right: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      body .el-main-cba footer p {
+        font-family: 'Urbanist', sans-serif;
+        font-weight: bolder;
+        font-size: 14.28571px;
+        color: #2e3532; }
+      body .el-main-cba footer ul {
+        font-family: 'Urbanist', sans-serif;
+        font-weight: bolder;
+        font-size: 14.28571px; }
+        body .el-main-cba footer ul li {
+          display: inline-flex; }
+          body .el-main-cba footer ul li a:link, body .el-main-cba footer ul li a:visited, body .el-main-cba footer ul li a:active {
+            text-decoration: none;
+            cursor: pointer; }
+          body .el-main-cba footer ul li a {
+            color: #2e3532; }
+            body .el-main-cba footer ul li a:hover {
+              color: white; }
+  @media (min-width: 576px) and (max-width: 768px) {
+    body header .navbar .container-fluid .botoncito {
+      margin-right: 3em; }
+    body header .navbar .container-fluid div .menu {
+      align-items: flex-start;
+      margin-right: 3em; }
+    body .el-main-cba {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "banner " "diseno-subtitulo"    "card-cba"; }
+      body .el-main-cba h2 {
+        font-size: 1.2rem;
+        text-align: center; }
+    body footer {
+      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto; }
+      body footer p {
+        display: flex;
+        flex-direction: column; }
+      body footer .flex-footer {
+        display: flex;
+        flex-direction: column; } }
+  @media (min-width: 300px) and (max-width: 578px) {
+    body header .navbar .container-fluid .botoncito {
+      margin-right: 3em; }
+    body header .navbar .container-fluid div .menu {
+      align-items: flex-start;
+      margin-right: 3em; }
+    body .el-main-cba {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "banner " "diseno-subtitulo"    "card-cba"; }
+      body .el-main-cba h2 {
+        font-size: 1.2rem;
+        text-align: center; }
+    body footer {
+      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto; }
+      body footer p {
+        display: flex;
+        flex-direction: column; }
+      body footer .flex-footer {
+        display: flex;
+        flex-direction: column; } }
+
+/*DESARROLLO ESTADIAS*/
+body {
+  background-color: #d4bcd6;
+  /*MEDIA QUERIES ESTADIAS*/
+  /*Small devices (576 a 768px)*/
+  /*Extra Small devices (300 a 578px)*/ }
   body header nav div .diseno-titulo a {
     text-decoration: none;
     font-family: 'Urbanist', sans-serif;
@@ -186,35 +465,69 @@ body {
     font-size: 33.33333px; }
     body header nav div .diseno-titulo a:hover {
       color: white; }
-  body .dpto-main-grid {
+  body .estadias-main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas: "banner banner" "diseno-subtitulo diseno-subtitulo"    "carousel carousel" "texto-departamento texto-departamento";
-    border: solid #292929;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "banner banner" "diseno-subtitulo diseno-subtitulo"    "estadia-bloque estadia-bloque" "estadia-bloque estadia-bloque";
+    row-gap: 1.5em;
+    border: solid 5px #2e3532;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin: 1em;
     padding: 1.3em;
-    row-gap: 1.5em;
-    padding: 1.5em;
     display: flex;
     flex-direction: column; }
-    body .dpto-main-grid .banner {
+    body .estadias-main .banner {
       grid-area: banner; }
-    body .dpto-main-grid .diseno-subtitulo {
+    body .estadias-main h2 {
       grid-area: diseno-subtitulo; }
-    body .dpto-main-grid .carousel {
-      grid-area: carousel; }
-    body .dpto-main-grid .texto-departamento {
-      grid-area: texto-departamento;
-      font-family: 'Urbanist', sans-serif;
-      font-weight: 300;
-      color: black;
-      font-size: 300;
-      justify-content: center;
-      border: solid #2E3532;
-      padding: 3%; }
+    body .estadias-main .estadia-bloque {
+      grid-area: estadia-bloque;
+      display: flex;
+      flex-direction: column;
+      flex-flow: column;
+      align-items: center;
+      gap: 5em; }
+      body .estadias-main .estadia-bloque .texto-estadia {
+        width: auto;
+        height: auto;
+        text-align: center;
+        font-weight: 300;
+        border: solid 3px #2e3532;
+        border-radius: 0.5;
+        padding: 3em;
+        margin-top: 3em; }
+      body .estadias-main .estadia-bloque .cards-estadia {
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 300;
+        color: black;
+        font-size: medium;
+        flex-flow: column;
+        text-align: center; }
+        body .estadias-main .estadia-bloque .cards-estadia .card {
+          align-self: center;
+          font-family: 'Urbanist', sans-serif;
+          font-weight: 300;
+          color: white;
+          font-size: 10px;
+          padding-top: 1rem; }
+          body .estadias-main .estadia-bloque .cards-estadia .card .card-body {
+            text-align: center; }
+            body .estadias-main .estadia-bloque .cards-estadia .card .card-body .card-title {
+              font-weight: 400; }
+            body .estadias-main .estadia-bloque .cards-estadia .card .card-body .boton-estadia {
+              background-color: #f1a208;
+              border-color: #f1a208; }
+              body .estadias-main .estadia-bloque .cards-estadia .card .card-body .boton-estadia:hover {
+                background-color: #f1a208;
+                border-color: #f1a208; }
   body footer {
-    background-color: #acba9d;
+    display: grid;
+    grid-template-areas: "p flex-footer";
+    grid-column: 1fr 1fr;
+    grid-row: auto;
+    background-color: #a0b986;
     width: cover;
     height: 50px;
     margin: .9em;
@@ -242,214 +555,205 @@ body {
           body footer ul li a:hover {
             color: white; }
   @media (min-width: 576px) and (max-width: 768px) {
-    body .dpto-main-grid {
-      grid-template-areas: "banner"  "diseno-subtitulo" "carousel" "texto-departamento";
-      grid-template-columns: 1fr;
+    body header .navbar .container-fluid .botoncito {
+      margin-right: 3em; }
+    body header .navbar .container-fluid div .menu {
+      align-items: flex-start;
+      margin-right: 3em; }
+    body .estadias-main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto auto auto;
-      gap: 2em; }
-    body .texto-hola {
-      font-size: 1.5rem;
-      text-align: center; }
-    body h2 {
-      font-size: 1.2rem;
-      text-align: center; }
-    body p .texto-departamento {
-      width: 70%; }
-    body footer p {
-      display: flex;
-      flex-direction: column; } }
-
-/*Desarrollo html Cordoba*/
-.el-main-cba {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "banner banner" "diseno-subtitulo diseno-subtitulo"    "card-cba card-cba";
-  border: solid #292929;
-  margin: 1em;
-  padding: 1.3em;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Urbanist', sans-serif;
-  font-weight: 300;
-  color: black;
-  font-size: medium; }
-  .el-main-cba .banner {
-    grid-area: banner; }
-  .el-main-cba .diseno-subtitulo {
-    padding-left: 2rem; }
-  .el-main-cba .card-cba {
-    grid-area: card-cba;
-    display: flex;
-    flex-direction: column;
-    padding: 2%; }
-    .el-main-cba .card-cba #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption {
-      color: black;
-      background-color: #F8FAFF;
-      background-position-x: left; }
-    .el-main-cba .card-cba .texto-cordoba {
-      text-align: center;
-      font-weight: 600;
-      border: solid 3px #acba9d;
-      margin-top: 5em;
-      padding: 1rem; }
-
-/*/ Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) and (max-width: 768px) {
-  .el-main-cba {
-    border: solid 5px #7b5d5e;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "banner" "diseno-subtitulo"    "card-cba";
-    gap: 3em;
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 300;
-    color: black;
-    font-size: medium; }
-  .diseno-subtitulo {
-    align-self: center; } }
-
-/*Desarrollo html Estadias*/
-.estadias-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas: "banner banner" "diseno-subtitulo diseno-subtitulo"    "texto-estadia texto-estadia" "cards-estadia cards-estadia";
-  row-gap: 1.5em;
-  border: solid #292929;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin: 1em;
-  padding: 1.3em;
-  display: flex;
-  flex-direction: column; }
-  .estadias-main .banner {
-    grid-area: banner; }
-  .estadias-main .diseno-subtitulo {
-    grid-area: diseno-subtitulo; }
-  .estadias-main .estadia-bloque {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly; }
-    .estadias-main .estadia-bloque .texto-estadia {
-      grid-area: texto-estadia;
-      width: 40em;
-      height: 15em;
-      text-align: center;
-      font-weight: 600;
-      border: solid 3px #acba9d;
-      border-radius: 0.5;
-      margin-top: 3.5em;
-      padding: 1rem;
-      background-color: whitesmoke; }
-    .estadias-main .estadia-bloque .cards-estadia {
-      grid-area: cards-estadia;
-      font-family: 'Urbanist', sans-serif;
-      font-weight: 300;
-      color: black;
-      font-size: medium;
-      align-self: center;
-      text-align: center; }
-      .estadias-main .estadia-bloque .cards-estadia .card .card-body-estadias {
+      grid-template-areas: "banner banner" "diseno-subtitulo diseno-subtitulo"    "estadia-bloque estadia-bloque" "estadia-bloque estadia-bloque"; }
+      body .estadias-main h2 {
+        font-size: 1.2rem;
         text-align: center; }
-        .estadias-main .estadia-bloque .cards-estadia .card .card-body-estadias .texto {
-          font-weight: 400; }
-      .estadias-main .estadia-bloque .cards-estadia .card-dos div .card-title {
-        align-self: center;
-        font-family: 'Urbanist', sans-serif;
-        font-weight: 300;
-        color: white;
-        font-size: 10px;
-        padding-top: 1rem; }
-        .estadias-main .estadia-bloque .cards-estadia .card-dos div .card-title .boton-estadia:hover {
-          background-color: #292929;
-          border-color: #292929; }
+    body footer {
+      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto; }
+      body footer p {
+        display: flex;
+        flex-direction: column; }
+      body footer .flex-footer {
+        display: flex;
+        flex-direction: column; } }
+  @media (min-width: 300px) and (max-width: 578px) {
+    body header .navbar .container-fluid .botoncito {
+      margin-right: 3em; }
+    body header .navbar .container-fluid div .menu {
+      align-items: flex-start;
+      margin-right: 3em; }
+    body .estadias-main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: "banner banner" "diseno-subtitulo diseno-subtitulo"    "estadia-bloque estadia-bloque" "estadia-bloque estadia-bloque"; }
+      body .estadias-main h2 {
+        font-size: 1.2rem;
+        text-align: center; }
+    body footer {
+      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto; }
+      body footer p {
+        display: flex;
+        flex-direction: column; }
+      body footer .flex-footer {
+        display: flex;
+        flex-direction: column; } }
 
-footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 22vh; }
-
-@media (min-width: 576px) and (max-width: 768px) {
-  .estadias-main {
+/*DESARROLLO CONTACTO*/
+body {
+  background-color: #d4bcd6;
+  /*MEDIA QUERIES ESTADIAS*/
+  /*Small devices (576 a 768px)*/
+  /*Extra Small devices (300 a 578px)*/ }
+  body .el-main-contacto {
+    display: grid;
+    background-size: 100%;
+    border: solid 5px #2e3532;
+    margin: 1em;
+    padding: 1.3em;
+    grid-template-areas: "banner" "diseno-subtitulo" "form-mapa" "form-mapa";
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "banner" "diseno-subtitulo"    "texto-estadia";
-    border: solid 5px #292929; }
-  .diseno-subtitulo {
-    align-self: center; }
-  .cards-estadia {
-    align-self: center; } }
-
-/*Desarrollo html Contacto*/
-body .el-main-contacto {
-  display: grid;
-  background-size: 100%;
-  border: solid #292929;
-  margin: 1em;
-  padding: 1.3em;
-  grid-template-areas: "banner" "diseno-subtitulo" "form-mapa" "form-mapa";
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto; }
-  body .el-main-contacto .banner {
-    grid-area: banner; }
-  body .el-main-contacto .diseno-subtitulo {
-    grid-area: diseno-subtitulo;
-    padding-left: 6em; }
-  body .el-main-contacto .form-mapa {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    grid-area: form-mapa;
-    gap: 4em;
-    margin-bottom: 2em;
-    justify-content: space-evenly; }
-    body .el-main-contacto .form-mapa .formulario {
+    grid-template-rows: auto auto auto auto; }
+    body .el-main-contacto .banner {
+      grid-area: banner; }
+    body .el-main-contacto h2 {
+      grid-area: diseno-subtitulo;
+      text-align: left; }
+    body .el-main-contacto .form-mapa {
+      display: flex;
+      flex-direction: row;
       font-family: 'Urbanist', sans-serif;
       font-weight: 300;
       color: #2e3532;
       font-size: medium;
-      padding-top: 5em;
-      padding-bottom: 1em;
-      width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column; }
-      body .el-main-contacto .form-mapa .formulario .input {
-        width: 90%;
-        height: 2em;
-        margin: 0.5rem;
-        transition: height 3s, width 3s; }
-        body .el-main-contacto .form-mapa .formulario .input:hover {
+      text-align: center;
+      font-weight: bold;
+      flex-wrap: wrap;
+      grid-area: form-mapa;
+      padding: 2em;
+      gap: 3em;
+      justify-content: center; }
+      body .el-main-contacto .form-mapa .campo-formulario {
+        border: solid 3px #2e3532; }
+      body .el-main-contacto .form-mapa .formulario {
+        padding-top: 5em;
+        padding-bottom: 1em;
+        padding-left: 5em;
+        padding-right: 5em;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column; }
+        body .el-main-contacto .form-mapa .formulario .input {
+          width: 90%;
           height: 2em;
-          width: 100%;
-          border: solid 1px black; }
-      body .el-main-contacto .form-mapa .formulario .boton, body .el-main-contacto .form-mapa .formulario .boton:hover {
-        cursor: pointer;
-        background-color: #292929;
-        border-color: #292929; }
-
-@media (min-width: 576px) and (max-width: 768px) {
-  body .texto-hola {
-    align-self: center; }
-  body .el-main-contacto {
-    grid-template-areas: "banner" "diseno-subtitulo" "form-mapa";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    border: solid 5px #292929;
-    flex-wrap: wrap;
+          margin: 0.5rem;
+          transition: height 3s, width 3s;
+          text-align: center; }
+          body .el-main-contacto .form-mapa .formulario .input:hover {
+            height: 2em;
+            width: 100%;
+            border: solid 1px black; }
+        body .el-main-contacto .form-mapa .formulario .boton, body .el-main-contacto .form-mapa .formulario .boton:hover {
+          cursor: pointer;
+          background-color: #f1a208;
+          border-color: #f1a208; }
+      body .el-main-contacto .form-mapa .campo-mapa {
+        border: solid 3px #2e3532;
+        justify-content: center;
+        max-width: 500px;
+        padding-top: 5em;
+        padding-bottom: 1em;
+        padding-left: 4em;
+        padding-right: 6em; }
+  body footer {
+    display: grid;
+    grid-template-areas: "p flex-footer";
+    grid-column: 1fr 1fr;
+    grid-row: auto;
+    background-color: #a0b986;
+    width: cover;
+    height: 50px;
+    margin: .9em;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
-    flex-direction: column;
-    align-content: center; }
-    body .el-main-contacto .diseno-subtitulo {
-      margin-left: 0%;
-      align-self: center; }
-    body .el-main-contacto .formulario {
-      width: 100%;
-      margin: 0 auto;
-      justify-content: center;
-      align-items: center; } }
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    body footer p {
+      font-family: 'Urbanist', sans-serif;
+      font-weight: bolder;
+      font-size: 14.28571px;
+      color: #2e3532; }
+    body footer ul {
+      font-family: 'Urbanist', sans-serif;
+      font-weight: bolder;
+      font-size: 14.28571px; }
+      body footer ul li {
+        display: inline-flex; }
+        body footer ul li a:link, body footer ul li a:visited, body footer ul li a:active {
+          text-decoration: none;
+          cursor: pointer; }
+        body footer ul li a {
+          color: #2e3532; }
+          body footer ul li a:hover {
+            color: white; }
+  @media (min-width: 576px) and (max-width: 768px) {
+    body header .navbar .container-fluid .botoncito {
+      margin-right: 3em; }
+    body header .navbar .container-fluid div .menu {
+      align-items: flex-start;
+      margin-right: 3em; }
+    body .el-main-contacto {
+      display: grid;
+      grid-template-areas: "banner" "diseno-subtitulo" "form-mapa" "form-mapa";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto; }
+      body .el-main-contacto h2 {
+        font-size: 1.2rem;
+        text-align: center; }
+      body .el-main-contacto .form-mapa {
+        display: flex;
+        flex-direction: column; }
+    body footer {
+      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto; }
+      body footer p {
+        display: flex;
+        flex-direction: column; }
+      body footer .flex-footer {
+        display: flex;
+        flex-direction: column; } }
+  @media (min-width: 300px) and (max-width: 578px) {
+    body header .navbar .container-fluid .botoncito {
+      margin-right: 3em; }
+    body header .navbar .container-fluid div .menu {
+      align-items: flex-start;
+      margin-right: 3em; }
+    body .el-main-contacto {
+      display: grid;
+      grid-template-areas: "banner" "diseno-subtitulo" "form-mapa" "form-mapa";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto; }
+      body .el-main-contacto h2 {
+        font-size: 1.2rem;
+        text-align: center; }
+      body .el-main-contacto .form-mapa {
+        display: flex;
+        flex-direction: column; }
+    body footer {
+      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto; }
+      body footer p {
+        display: flex;
+        flex-direction: column; }
+      body footer .flex-footer {
+        display: flex;
+        flex-direction: column; } }

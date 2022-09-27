@@ -34,13 +34,13 @@
         </nav>
       </header>  
     <main class="el-main-contacto">
-        <section class="banner"> <p class="texto-hola"> ¡Hola! </p></section> 
+        <div class="banner"></div>
         <h2 class="diseno-subtitulo mt-5 mt-5"> CONTACTO </h2>
         <div class="form-mapa">
-            <div>
+            <div class="campo-formulario">
                 <form class="formulario" action="" method="post">
                     <fieldset>
-                        <legend class="fs-6">Dejanos tus datos y nos contactamos con vos</legend>
+                        <legend class="fs-6 mb-5">DEJANOS TUS DATOS Y NOS PONDREMOS EN CONTACTO</legend>
                         <div>
                             <label for="Nombre" >Ingresa tu nombre</label>
                             <input class="input" type="text" id="Nombre" placeholder="Ingresa tu nombre">   
@@ -54,19 +54,22 @@
                             <input class="input" type="date" id="Fecha" placeholder="Fecha de tu estadia">
                         </div>
                         <div>    
-                            <button type="button" class="boton btn btn-primary mt-3">Enviar</button>
+                            <button type="button" class="boton btn btn-primary mt-5">Enviar</button>
                         </div>
                     </fieldset>
                 </form>
             </div> 
-            <div class="mapa ms-5">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.9552933774403!2d-64.16958358530631!3d-31.415357803344733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a3a5babfe369%3A0xb0fb180dd7e97055!2sSonoma%202%20%7C%20DDD%20Desarrollistas%20S.A.!5e0!3m2!1ses-419!2sar!4v1661721872228!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="campo-mapa">
+                <div class="mapa ms-5">
+                    <p> DONDE ESTAMOS </p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.9552933774403!2d-64.16958358530631!3d-31.415357803344733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a3a5babfe369%3A0xb0fb180dd7e97055!2sSonoma%202%20%7C%20DDD%20Desarrollistas%20S.A.!5e0!3m2!1ses-419!2sar!4v1661721872228!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </main>
     <footer class="sticky-bottom">
         <p class="color-footer"> Proyecto desarrollado por <span> Daniela Colazo </span> </p> 
-        <ul class="color-footer">
+        <ul class="flex-footer color-footer">
             <li> <a href="https://www.instagram.com/espaciodeheza/"> Instagram </a></li>
             <li> <a href="https://www.whatsapp.com/?lang=es"> Whatsapp </a></li>
         </ul>

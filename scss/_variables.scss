@@ -1,7 +1,8 @@
-$color-banner: rgb(41, 41, 41);
-$color-header-footer: #acba9d;
+$color-banner:#d4bcd6 ;
+$color-header-footer: #a0b986;
 $color-letra-oscuro: #2e3532;
 $color-letra-claro: #d4bcbc;
+$color-amarillo: #f1a208;
 $margen: 100px;
 $quantity: 15;
 
@@ -22,6 +23,6 @@ $mapa: (
     color-header-footer: #acba9d,
     color-letra-oscuro: #2e3532,
     color-letra-claro: #d4bcbc,
-    color-boton-card: white,
-    color-boton-hover: white
+    color-boton-card: #f1a208,
+    color-boton-hover: #f1a208
 );
