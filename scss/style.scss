@@ -892,15 +892,15 @@ body {
             gap: 3em;
             justify-content: center;
             .campo-formulario{
-            border: solid 3px $color-letra-oscuro;  
-            
+            border: solid 3px $color-letra-oscuro;   
             }
                 .formulario {
                     padding-top: 5em;
                     padding-bottom: 1em;
                     padding-left: 5em;
                     padding-right: 5em;
-                    width: 100%;
+                    width: auto;
+                    height: auto;
                     max-width: 500px;
                     margin: 0 auto;
                     @include flexbox(column);
@@ -928,7 +928,9 @@ body {
             .campo-mapa {
                 border: solid 3px $color-letra-oscuro;  
                 justify-content: center;  
-                max-width: 500px;   
+                max-width: 500px;
+                width: auto;
+                height: auto;   
                 padding-top: 5em;
                 padding-bottom: 1em;
                 padding-left: 4em;
@@ -1010,6 +1012,8 @@ body {
             }
             .form-mapa{
                 @include flexbox(column);
+                width: auto;
+                height: auto;
             }
         }
     footer {
@@ -1058,6 +1062,8 @@ body {
             }
             .form-mapa{
                 @include flexbox(column);
+                width: auto;
+                height: auto;
             }
         }
     footer {

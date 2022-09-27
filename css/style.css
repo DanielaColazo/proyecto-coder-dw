@@ -644,7 +644,8 @@ body {
         padding-bottom: 1em;
         padding-left: 5em;
         padding-right: 5em;
-        width: 100%;
+        width: auto;
+        height: auto;
         max-width: 500px;
         margin: 0 auto;
         display: flex;
@@ -667,6 +668,8 @@ body {
         border: solid 3px #2e3532;
         justify-content: center;
         max-width: 500px;
+        width: auto;
+        height: auto;
         padding-top: 5em;
         padding-bottom: 1em;
         padding-left: 4em;
@@ -719,7 +722,9 @@ body {
         text-align: center; }
       body .el-main-contacto .form-mapa {
         display: flex;
-        flex-direction: column; }
+        flex-direction: column;
+        width: auto;
+        height: auto; }
     body footer {
       grid-template-areas: "p flex-footer"  "p flex-footer";
       grid-template-columns: 1fr 1fr;
@@ -746,7 +751,9 @@ body {
         text-align: center; }
       body .el-main-contacto .form-mapa {
         display: flex;
-        flex-direction: column; }
+        flex-direction: column;
+        width: auto;
+        height: auto; }
     body footer {
       grid-template-areas: "p flex-footer"  "p flex-footer";
       grid-template-columns: 1fr 1fr;
