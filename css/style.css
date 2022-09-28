@@ -8,7 +8,7 @@ body {
   background-color: #d4bcd6;
   /*MEDIA QUERIES INDEX*/
   /*Small devices (576 a 768px)*/
-  /*Extra Small devices (300 a 578px)*/ }
+  /*Extra Small devices (300 a 576px)*/ }
   body header {
     position: sticky;
     margin: .9em; }
@@ -169,7 +169,7 @@ body {
         grid-area: flex-footer;
         display: flex;
         flex-direction: column; } }
-  @media (min-width: 300px) and (max-width: 578px) {
+  @media (min-width: 300px) and (max-width: 576px) {
     body header .navbar .container-fluid .botoncito {
       margin-right: 3em; }
     body header .navbar .container-fluid div .menu {
@@ -210,7 +210,7 @@ body {
   background-color: #d4bcd6;
   /*MEDIA QUERIES DEPARTAMENTO*/
   /*Small devices (576 a 768px)*/
-  /*Extra Small devices (300 a 578px)*/ }
+  /*Extra Small devices (300 a 576px)*/ }
   body header nav div .diseno-titulo a {
     text-decoration: none;
     font-family: 'Urbanist', sans-serif;
@@ -302,7 +302,7 @@ body {
       body footer .flex-footer {
         display: flex;
         flex-direction: column; } }
-  @media (min-width: 300px) and (max-width: 578px) {
+  @media (min-width: 300px) and (max-width: 576px) {
     body header .navbar .container-fluid .botoncito {
       margin-right: 3em; }
     body header .navbar .container-fluid div .menu {
@@ -332,7 +332,7 @@ body {
   background-color: #d4bcd6;
   /*MEDIA QUERIES CORDOBA*/
   /*Small devices (576 a 768px)*/
-  /*Extra Small devices (300 a 578px)*/ }
+  /*Extra Small devices (300 a 576px)*/ }
   body .el-main-cba {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -427,7 +427,7 @@ body {
       body footer .flex-footer {
         display: flex;
         flex-direction: column; } }
-  @media (min-width: 300px) and (max-width: 578px) {
+  @media (min-width: 300px) and (max-width: 576px) {
     body header .navbar .container-fluid .botoncito {
       margin-right: 3em; }
     body header .navbar .container-fluid div .menu {
@@ -456,7 +456,7 @@ body {
   background-color: #d4bcd6;
   /*MEDIA QUERIES ESTADIAS*/
   /*Small devices (576 a 768px)*/
-  /*Extra Small devices (300 a 578px)*/ }
+  /*Extra Small devices (300 a 576px)*/ }
   body header nav div .diseno-titulo a {
     text-decoration: none;
     font-family: 'Urbanist', sans-serif;
@@ -578,7 +578,7 @@ body {
       body footer .flex-footer {
         display: flex;
         flex-direction: column; } }
-  @media (min-width: 300px) and (max-width: 578px) {
+  @media (min-width: 300px) and (max-width: 576px) {
     body header .navbar .container-fluid .botoncito {
       margin-right: 3em; }
     body header .navbar .container-fluid div .menu {
@@ -606,18 +606,23 @@ body {
 /*DESARROLLO CONTACTO*/
 body {
   background-color: #d4bcd6;
-  /*MEDIA QUERIES ESTADIAS*/
+  /*MEDIA QUERIES CONTACTO*/
   /*Small devices (576 a 768px)*/
-  /*Extra Small devices (300 a 578px)*/ }
+  /*Extra Small devices (300 a 576px)*/ }
+  body header nav div h1 a {
+    text-decoration: none;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 300;
+    color: #2e3532;
+    font-size: 33.33333px; }
+    body header nav div h1 a:hover {
+      color: white; }
   body .el-main-contacto {
     display: grid;
-    background-size: 100%;
-    border: solid 5px #2e3532;
-    margin: 1em;
-    padding: 1.3em;
-    grid-template-areas: "banner" "diseno-subtitulo" "form-mapa" "form-mapa";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto; }
+    grid-template-areas: "banner banner" "diseno-subtitulo diseno-subtitulo" "form-mapa form-mapa" "form-mapa form-mapa";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    border: solid 5px #2e3532; }
     body .el-main-contacto .banner {
       grid-area: banner; }
     body .el-main-contacto h2 {
@@ -634,78 +639,49 @@ body {
       font-weight: bold;
       flex-wrap: wrap;
       grid-area: form-mapa;
-      padding: 2em;
       gap: 3em;
       justify-content: center; }
       body .el-main-contacto .form-mapa .campo-formulario {
-        border: solid 3px #2e3532; }
-      body .el-main-contacto .form-mapa .formulario {
-        padding-top: 5em;
-        padding-bottom: 1em;
-        padding-left: 5em;
-        padding-right: 5em;
-        width: auto;
-        height: auto;
-        max-width: 500px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column; }
-        body .el-main-contacto .form-mapa .formulario .input {
-          width: 90%;
-          height: 2em;
-          margin: 0.5rem;
-          transition: height 3s, width 3s;
-          text-align: center; }
-          body .el-main-contacto .form-mapa .formulario .input:hover {
+        border: solid 3px #2e3532;
+        padding: 3em; }
+        body .el-main-contacto .form-mapa .campo-formulario .formulario {
+          width: auto;
+          height: auto;
+          max-width: 500px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column; }
+          body .el-main-contacto .form-mapa .campo-formulario .formulario .input {
+            width: 90%;
             height: 2em;
-            width: 100%;
-            border: solid 1px black; }
-        body .el-main-contacto .form-mapa .formulario .boton, body .el-main-contacto .form-mapa .formulario .boton:hover {
-          cursor: pointer;
-          background-color: #f1a208;
-          border-color: #f1a208; }
+            margin: 0.5rem;
+            transition: height 3s, width 3s;
+            text-align: center; }
+            body .el-main-contacto .form-mapa .campo-formulario .formulario .input:hover {
+              height: 2em;
+              width: 100%;
+              border: solid 1px black; }
+          body .el-main-contacto .form-mapa .campo-formulario .formulario .boton, body .el-main-contacto .form-mapa .campo-formulario .formulario .boton:hover {
+            cursor: pointer;
+            background-color: #f1a208;
+            border-color: #f1a208; }
       body .el-main-contacto .form-mapa .campo-mapa {
         border: solid 3px #2e3532;
         justify-content: center;
         max-width: 500px;
         width: auto;
         height: auto;
-        padding-top: 5em;
-        padding-bottom: 1em;
-        padding-left: 4em;
-        padding-right: 6em; }
+        padding: 3em; }
   body footer {
-    display: grid;
-    grid-template-areas: "p flex-footer";
-    grid-column: 1fr 1fr;
-    grid-row: auto;
-    background-color: #a0b986;
-    width: cover;
-    height: 50px;
-    margin: .9em;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; }
+    grid-template-areas: "p flex-footer"  "p flex-footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto; }
     body footer p {
-      font-family: 'Urbanist', sans-serif;
-      font-weight: bolder;
-      font-size: 14.28571px;
-      color: #2e3532; }
-    body footer ul {
-      font-family: 'Urbanist', sans-serif;
-      font-weight: bolder;
-      font-size: 14.28571px; }
-      body footer ul li {
-        display: inline-flex; }
-        body footer ul li a:link, body footer ul li a:visited, body footer ul li a:active {
-          text-decoration: none;
-          cursor: pointer; }
-        body footer ul li a {
-          color: #2e3532; }
-          body footer ul li a:hover {
-            color: white; }
+      display: flex;
+      flex-direction: column; }
+    body footer .flex-footer {
+      display: flex;
+      flex-direction: column; }
   @media (min-width: 576px) and (max-width: 768px) {
     body header .navbar .container-fluid .botoncito {
       margin-right: 3em; }
@@ -717,14 +693,17 @@ body {
       grid-template-areas: "banner" "diseno-subtitulo" "form-mapa" "form-mapa";
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto auto; }
+      body .el-main-contacto .banner {
+        display: flex;
+        width: auto; }
       body .el-main-contacto h2 {
         font-size: 1.2rem;
         text-align: center; }
       body .el-main-contacto .form-mapa {
         display: flex;
-        flex-direction: column;
-        width: auto;
-        height: auto; }
+        flex-direction: column; }
+        body .el-main-contacto .form-mapa .campo-mapa {
+          justify-items: center; }
     body footer {
       grid-template-areas: "p flex-footer"  "p flex-footer";
       grid-template-columns: 1fr 1fr;
@@ -735,7 +714,7 @@ body {
       body footer .flex-footer {
         display: flex;
         flex-direction: column; } }
-  @media (min-width: 300px) and (max-width: 578px) {
+  @media (min-width: 300px) and (max-width: 576px) {
     body header .navbar .container-fluid .botoncito {
       margin-right: 3em; }
     body header .navbar .container-fluid div .menu {
@@ -749,6 +728,9 @@ body {
       body .el-main-contacto h2 {
         font-size: 1.2rem;
         text-align: center; }
+      body .el-main-contacto .banner {
+        display: flex;
+        flex-wrap: wrap; }
       body .el-main-contacto .form-mapa {
         display: flex;
         flex-direction: column;
