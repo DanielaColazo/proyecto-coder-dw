@@ -140,9 +140,9 @@ body {
       align-items: flex-start;
       margin-right: 3em; }
     body .main-grid {
-      grid-template-areas: "banner"  "el-subtitulo" "carousel" "las-cards";
+      grid-template-areas: "banner"  "el-subtitulo" "carousel" "las-cards" "las-cards" "las-cards";
       grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto auto; }
+      grid-template-rows: auto auto auto auto auto auto; }
       body .main-grid .banner {
         width: 100%; }
       body .main-grid h2 {
@@ -151,12 +151,11 @@ body {
       body .main-grid .las-cards {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         justify-content: space-between;
         align-self: center;
         gap: 2px; }
-        body .main-grid .las-cards .card-body .card-text {
-          display: inline; }
+        body .main-grid .las-cards .card {
+          display: block; }
     body footer {
       grid-template-areas: "p flex-footer"  "p flex-footer";
       grid-template-columns: 1fr 1fr;
@@ -176,9 +175,9 @@ body {
       align-items: flex-start;
       margin-right: 3em; }
     body .main-grid {
-      grid-template-areas: "banner"  "el-subtitulo" "carousel" "las-cards";
+      grid-template-areas: "banner"  "el-subtitulo" "carousel" "las-cards" "las-cards" "las-cards";
       grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto auto; }
+      grid-template-rows: auto auto auto auto auto auto; }
       body .main-grid .banner {
         justify-content: space-around;
         height: 5rem; }
@@ -190,8 +189,6 @@ body {
         flex-direction: column;
         justify-content: space-between;
         align-self: center; }
-        body .main-grid .las-cards .card-body .card-text {
-          display: inline; }
     body footer {
       grid-template-areas: "p flex-footer"  "p flex-footer";
       grid-template-columns: 1fr 1fr;
@@ -569,10 +566,10 @@ body {
       body .estadias-main h2 {
         font-size: 1.2rem;
         text-align: center; }
-      body .estadias-main .estadia-bloque .cards-estadia {
-        display: flex;
-        flex-wrap: wrap;
-        width: auto; }
+      body .estadias-main .estadia-bloque {
+        display: block; }
+        body .estadias-main .estadia-bloque .cards-estadia {
+          justify-content: center; }
     body footer {
       grid-template-areas: "p flex-footer"  "p flex-footer";
       grid-template-columns: 1fr 1fr;
@@ -597,10 +594,14 @@ body {
       body .estadias-main h2 {
         font-size: 1.2rem;
         text-align: center; }
-      body .estadias-main .estadia-bloque .cards-estadia {
-        display: flex;
-        flex-wrap: wrap;
-        width: auto; }
+      body .estadias-main .estadia-bloque {
+        display: block;
+        justify-content: center; }
+        body .estadias-main .estadia-bloque .cards-estadia {
+          justify-content: center; }
+          body .estadias-main .estadia-bloque .cards-estadia .card {
+            justify-self: center;
+            align-self: center; }
     body footer {
       grid-template-areas: "p flex-footer"  "p flex-footer";
       grid-template-columns: 1fr 1fr;

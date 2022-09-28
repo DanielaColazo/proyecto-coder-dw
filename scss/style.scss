@@ -185,9 +185,11 @@ body {
             grid-template-areas: "banner" 
                                  "el-subtitulo"
                                  "carousel"
+                                 "las-cards"
+                                 "las-cards"
                                  "las-cards";
             grid-template-columns: 1fr;
-            grid-template-rows: auto auto auto auto;
+            grid-template-rows: auto auto auto auto auto auto;
             .banner{
                 width: 100%;
             }
@@ -197,14 +199,11 @@ body {
             }
             .las-cards {
             @include flexbox(column);
-            flex-wrap: wrap;
             justify-content: space-between;
             align-self: center;
             gap: 2px;
-            .card-body{
-                .card-text{
-                    display: inline;
-                }
+            .card {
+                display: block;
             }
         }
     }
@@ -244,9 +243,11 @@ body {
             grid-template-areas: "banner" 
                                  "el-subtitulo"
                                  "carousel"
+                                 "las-cards"
+                                 "las-cards"
                                  "las-cards";
             grid-template-columns: 1fr;
-            grid-template-rows: auto auto auto auto;
+            grid-template-rows: auto auto auto auto auto auto;
             .banner{
                 justify-content: space-around;
                 height: 5rem;
@@ -259,11 +260,6 @@ body {
             @include flexbox(column);
             justify-content: space-between;
             align-self: center;
-                .card-body{
-                    .card-text{
-                        display: inline;
-                    }
-                }
             }
         }
     
@@ -797,11 +793,10 @@ body {
                 text-align: center;
             }
             .estadia-bloque{
+                display: block;
                 .cards-estadia{
-                    display: flex;
-                    flex-wrap: wrap;
-                    width: auto;
-                }
+                    justify-content: center;
+                }    
             }
         }       
     footer {
@@ -849,11 +844,15 @@ body {
                 text-align: center;
             }
             .estadia-bloque{
+                display: block;
+                justify-content: center;
                 .cards-estadia{
-                    display: flex;
-                    flex-wrap: wrap;
-                    width: auto;
-                }
+                    justify-content: center;
+                    .card{
+                        justify-self: center;
+                        align-self: center;
+                        }
+                }    
             }
         }       
     footer {
