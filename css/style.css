@@ -18,15 +18,17 @@ body {
         margin-left: 20px;
         margin-top: 10px;
         margin-bottom: 20px; }
-      body header nav div a {
-        text-decoration: none;
-        font-family: 'Urbanist', sans-serif;
-        font-weight: 300;
-        color: #2e3532;
-        font-size: 33.33333px; }
-        body header nav div a:hover {
-          color: white; }
-      body header nav .color-icono {
+        body header nav div .diseno-titulo a {
+          text-decoration: none;
+          font-family: 'Urbanist', sans-serif;
+          font-weight: 300;
+          color: #2e3532;
+          font-size: 33.33333px; }
+          body header nav div .diseno-titulo a:hover {
+            color: white; }
+      body header nav div .botoncito {
+        display: flex;
+        justify-self: end;
         background-color: #F8FAFF;
         border: solid #F8FAFF; }
     body header div div .navbar-nav a {
@@ -101,44 +103,35 @@ body {
           text-align: center; }
   body footer {
     display: grid;
-    grid-template-areas: "p flex-footer";
-    grid-column: 1fr 1fr;
-    grid-row: auto;
+    grid-template-areas: "el-footer el-footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     background-color: #a0b986;
-    width: cover;
-    height: 50px;
     margin: .9em;
     padding-left: 10px;
     padding-right: 10px;
-    display: flex;
-    flex-wrap: wrap;
+    display: inline-flex;
     justify-content: space-between; }
+    body footer .el-footer {
+      grid-area: el-footer; }
     body footer p {
-      grid-area: p;
       font-family: 'Urbanist', sans-serif;
       font-weight: bolder;
       font-size: 14.28571px;
       color: #2e3532; }
-    body footer .flex-footer {
-      grid-area: flex-footer;
-      font-family: 'Urbanist', sans-serif;
-      font-weight: bolder;
-      font-size: 14.28571px; }
-      body footer .flex-footer li {
-        display: inline-flex; }
-        body footer .flex-footer li a:link, body footer .flex-footer li a:visited, body footer .flex-footer li a:active {
-          text-decoration: none;
-          cursor: pointer; }
-        body footer .flex-footer li a {
-          color: #2e3532; }
-          body footer .flex-footer li a:hover {
-            color: white; }
+    body footer ul li a:link, body footer ul li a:visited, body footer ul li a:active {
+      text-decoration: none;
+      cursor: pointer; }
+    body footer ul li a:hover {
+      border-color: #F8FAFF; }
   @media (min-width: 576px) and (max-width: 768px) {
-    body header .navbar .container-fluid .botoncito {
-      margin-right: 3em; }
-    body header .navbar .container-fluid div .menu {
-      align-items: flex-start;
-      margin-right: 3em; }
+    body header .navbar .container-fluid {
+      display: inline-flex; }
+      body header .navbar .container-fluid .botoncito {
+        margin-right: 3em; }
+      body header .navbar .container-fluid div .menu {
+        align-items: flex-start;
+        margin-right: 3em; }
     body .main-grid {
       grid-template-areas: "banner"  "el-subtitulo" "carousel" "las-cards" "las-cards" "las-cards";
       grid-template-columns: 1fr;
@@ -157,20 +150,16 @@ body {
         body .main-grid .las-cards .card {
           display: block; }
     body footer {
-      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-areas: "el-footer el-footer";
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto; }
-      body footer p {
-        grid-area: p;
-        display: flex;
-        flex-direction: column; }
-      body footer .flex-footer {
-        grid-area: flex-footer;
-        display: flex;
-        flex-direction: column; } }
+      grid-template-rows: auto; }
+      body footer .el-footer {
+        grid-area: el-footer; } }
   @media (min-width: 300px) and (max-width: 576px) {
+    body header .navbar .container-fluid h1 {
+      font-size: small; }
     body header .navbar .container-fluid .botoncito {
-      margin-right: 3em; }
+      margin-right: 0; }
     body header .navbar .container-fluid div .menu {
       align-items: flex-start;
       margin-right: 3em; }
@@ -190,17 +179,11 @@ body {
         justify-content: space-between;
         align-self: center; }
     body footer {
-      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-areas: "el-footer el-footer";
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto; }
-      body footer p {
-        grid-area: p;
-        display: flex;
-        flex-direction: column; }
-      body footer .flex-footer {
-        grid-area: flex-footer;
-        display: flex;
-        flex-direction: column; } }
+      grid-template-rows: auto; }
+      body footer .el-footer {
+        grid-area: el-footer; } }
 
 /*DESARROLLO DPTO*/
 body {
@@ -245,7 +228,7 @@ body {
       padding: 3%; }
   body footer {
     display: grid;
-    grid-template-areas: "p flex-footer";
+    grid-template-areas: "el-footer el-footer";
     grid-column: 1fr 1fr;
     grid-row: auto;
     background-color: #a0b986;
@@ -255,8 +238,10 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between; }
+    body footer .el-footer {
+      grid-area: el-footer; }
     body footer p {
       font-family: 'Urbanist', sans-serif;
       font-weight: bolder;
@@ -290,15 +275,11 @@ body {
         font-size: 1.2rem;
         text-align: center; }
     body footer {
-      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-areas: "el-footer el-footer";
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto; }
-      body footer p {
-        display: flex;
-        flex-direction: column; }
-      body footer .flex-footer {
-        display: flex;
-        flex-direction: column; } }
+      grid-template-rows: auto; }
+      body footer .el-footer {
+        grid-area: el-footer; } }
   @media (min-width: 300px) and (max-width: 576px) {
     body header .navbar .container-fluid .botoncito {
       margin-right: 3em; }
@@ -314,15 +295,11 @@ body {
         font-size: 1.2rem;
         text-align: center; }
     body footer {
-      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-areas: "el-footer el-footer";
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto; }
-      body footer p {
-        display: flex;
-        flex-direction: column; }
-      body footer .flex-footer {
-        display: flex;
-        flex-direction: column; } }
+      grid-template-rows: auto; }
+      body footer .el-footer {
+        grid-area: el-footer; } }
 
 /*DESARROLLO CORDOBA*/
 body {
@@ -371,7 +348,7 @@ body {
         padding: 1rem; }
     body .el-main-cba footer {
       display: grid;
-      grid-template-areas: "p flex-footer";
+      grid-template-areas: "el-footer el-footer";
       grid-column: 1fr 1fr;
       grid-row: auto;
       background-color: #a0b986;
@@ -383,6 +360,8 @@ body {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between; }
+      body .el-main-cba footer .el-footer {
+        grid-area: el-footer; }
       body .el-main-cba footer p {
         font-family: 'Urbanist', sans-serif;
         font-weight: bolder;
@@ -415,15 +394,11 @@ body {
         font-size: 1.2rem;
         text-align: center; }
     body footer {
-      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-areas: "el-footer el-footer";
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto; }
-      body footer p {
-        display: flex;
-        flex-direction: column; }
-      body footer .flex-footer {
-        display: flex;
-        flex-direction: column; } }
+      grid-template-rows: auto; }
+      body footer .el-footer {
+        grid-area: el-footer; } }
   @media (min-width: 300px) and (max-width: 576px) {
     body header .navbar .container-fluid .botoncito {
       margin-right: 3em; }
@@ -438,15 +413,11 @@ body {
         font-size: 1.2rem;
         text-align: center; }
     body footer {
-      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-areas: "el-footer el-footer";
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto; }
-      body footer p {
-        display: flex;
-        flex-direction: column; }
-      body footer .flex-footer {
-        display: flex;
-        flex-direction: column; } }
+      grid-template-rows: auto; }
+      body footer .el-footer {
+        grid-area: el-footer; } }
 
 /*DESARROLLO ESTADIAS*/
 body {
@@ -522,7 +493,7 @@ body {
                 border-color: #f1a208; }
   body footer {
     display: grid;
-    grid-template-areas: "p flex-footer";
+    grid-template-areas: "el-footer el-footer";
     grid-column: 1fr 1fr;
     grid-row: auto;
     background-color: #a0b986;
@@ -532,8 +503,10 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between; }
+    body footer .el-footer {
+      grid-area: el-footer; }
     body footer p {
       font-family: 'Urbanist', sans-serif;
       font-weight: bolder;
@@ -571,15 +544,11 @@ body {
         body .estadias-main .estadia-bloque .cards-estadia {
           justify-content: center; }
     body footer {
-      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-areas: "el-footer el-footer";
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto; }
-      body footer p {
-        display: flex;
-        flex-direction: column; }
-      body footer .flex-footer {
-        display: flex;
-        flex-direction: column; } }
+      grid-template-rows: auto; }
+      body footer .el-footer {
+        grid-area: el-footer; } }
   @media (min-width: 300px) and (max-width: 576px) {
     body header .navbar .container-fluid .botoncito {
       margin-right: 3em; }
@@ -603,15 +572,11 @@ body {
             justify-self: center;
             align-self: center; }
     body footer {
-      grid-template-areas: "p flex-footer"  "p flex-footer";
-      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "el-footer el-footer";
+      grid-template-columns: 1fr;
       grid-template-rows: auto auto; }
-      body footer p {
-        display: flex;
-        flex-direction: column; }
-      body footer .flex-footer {
-        display: flex;
-        flex-direction: column; } }
+      body footer .el-footer {
+        grid-area: el-footer; } }
 
 /*DESARROLLO CONTACTO*/
 body {
@@ -682,15 +647,11 @@ body {
         height: auto;
         padding: 3em; }
   body footer {
-    grid-template-areas: "p flex-footer"  "p flex-footer";
+    grid-template-areas: "el-footer el-footer";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto; }
-    body footer p {
-      display: flex;
-      flex-direction: column; }
-    body footer .flex-footer {
-      display: flex;
-      flex-direction: column; }
+    grid-template-rows: auto; }
+    body footer .el-footer {
+      grid-area: el-footer; }
   @media (min-width: 576px) and (max-width: 768px) {
     body header .navbar .container-fluid .botoncito {
       margin-right: 3em; }
@@ -714,15 +675,11 @@ body {
         body .el-main-contacto .form-mapa .campo-mapa {
           justify-items: center; }
     body footer {
-      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-areas: "el-footer el-footer";
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto; }
-      body footer p {
-        display: flex;
-        flex-direction: column; }
-      body footer .flex-footer {
-        display: flex;
-        flex-direction: column; } }
+      grid-template-rows: auto; }
+      body footer .el-footer {
+        grid-area: el-footer; } }
   @media (min-width: 300px) and (max-width: 576px) {
     body header .navbar .container-fluid .botoncito {
       margin-right: 3em; }
@@ -746,12 +703,8 @@ body {
         width: auto;
         height: auto; }
     body footer {
-      grid-template-areas: "p flex-footer"  "p flex-footer";
+      grid-template-areas: "el-footer el-footer";
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto; }
-      body footer p {
-        display: flex;
-        flex-direction: column; }
-      body footer .flex-footer {
-        display: flex;
-        flex-direction: column; } }
+      grid-template-rows: auto; }
+      body footer .el-footer {
+        grid-area: el-footer; } }
