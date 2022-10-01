@@ -7,28 +7,28 @@
 body {
   background-color: #d4bcd6;
   /*MEDIA QUERIES INDEX*/
-  /*Small devices (576 a 768px)*/
+  /*Small devices Index (576 a 768px)*/
   /*Extra Small devices (300 a 576px)*/ }
   body header {
     position: sticky;
     margin: .9em; }
     body header nav {
       background-color: #a0b986; }
-      body header nav div .diseno-titulo {
+      body header nav .contenedor .diseno-titulo {
         margin-left: 20px;
         margin-top: 10px;
         margin-bottom: 20px; }
-        body header nav div .diseno-titulo a {
+        body header nav .contenedor .diseno-titulo a {
           text-decoration: none;
           font-family: 'Urbanist', sans-serif;
           font-weight: 300;
           color: #2e3532;
           font-size: 33.33333px; }
-          body header nav div .diseno-titulo a:hover {
+          body header nav .contenedor .diseno-titulo a:hover {
             color: white; }
-      body header nav div .botoncito {
+      body header nav .contenedor .botoncito {
         display: flex;
-        justify-self: end;
+        margin-right: 3em;
         background-color: #F8FAFF;
         border: solid #F8FAFF; }
     body header div div .navbar-nav a {
@@ -110,26 +110,31 @@ body {
     margin: .9em;
     padding-left: 10px;
     padding-right: 10px;
-    display: inline-flex;
-    justify-content: space-between; }
+    display: flex;
+    flex-direction: inline-flex;
+    justify-content: space-between;
+    align-items: center; }
     body footer .el-footer {
       grid-area: el-footer; }
-    body footer p {
+    body footer .estilo-footer {
       font-family: 'Urbanist', sans-serif;
-      font-weight: bolder;
-      font-size: 14.28571px;
+      font-size: .8rem;
+      font-weight: bold;
       color: #2e3532; }
-    body footer ul li a:link, body footer ul li a:visited, body footer ul li a:active {
-      text-decoration: none;
-      cursor: pointer; }
-    body footer ul li a:hover {
-      border-color: #F8FAFF; }
+    body footer .flex-footer li {
+      margin-top: 10px;
+      padding: 5px; }
+      body footer .flex-footer li a:link, body footer .flex-footer li a:visited, body footer .flex-footer li a:active {
+        text-decoration: none;
+        cursor: pointer; }
+      body footer .flex-footer li a:hover {
+        border-color: #F8FAFF; }
   @media (min-width: 576px) and (max-width: 768px) {
-    body header .navbar .container-fluid {
-      display: inline-flex; }
-      body header .navbar .container-fluid .botoncito {
-        margin-right: 3em; }
-      body header .navbar .container-fluid div .menu {
+    body header .navbar .contenedor {
+      display: flex; }
+      body header .navbar .contenedor h1 {
+        font-size: 15px; }
+      body header .navbar .contenedor div .menu {
         align-items: flex-start;
         margin-right: 3em; }
     body .main-grid {
@@ -156,11 +161,11 @@ body {
       body footer .el-footer {
         grid-area: el-footer; } }
   @media (min-width: 300px) and (max-width: 576px) {
-    body header .navbar .container-fluid h1 {
+    body header .navbar .contenedor h1 {
       font-size: small; }
-    body header .navbar .container-fluid .botoncito {
-      margin-right: 0; }
-    body header .navbar .container-fluid div .menu {
+    body header .navbar .contenedor .botoncito {
+      padding: 20rem; }
+    body header .navbar .contenedor div .menu {
       align-items: flex-start;
       margin-right: 3em; }
     body .main-grid {
@@ -183,7 +188,12 @@ body {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto; }
       body footer .el-footer {
-        grid-area: el-footer; } }
+        grid-area: el-footer; }
+      body footer p {
+        font-size: 5px; }
+      body footer .flex-footer {
+        display: flex;
+        flex-direction: row; } }
 
 /*DESARROLLO DPTO*/
 body {
@@ -191,13 +201,13 @@ body {
   /*MEDIA QUERIES DEPARTAMENTO*/
   /*Small devices (576 a 768px)*/
   /*Extra Small devices (300 a 576px)*/ }
-  body header nav div .diseno-titulo a {
+  body header nav .contenedor .diseno-titulo a {
     text-decoration: none;
     font-family: 'Urbanist', sans-serif;
     font-weight: 300;
     color: #2e3532;
     font-size: 33.33333px; }
-    body header nav div .diseno-titulo a:hover {
+    body header nav .contenedor .diseno-titulo a:hover {
       color: white; }
   body .dpto-main-grid {
     display: grid;
@@ -242,23 +252,21 @@ body {
     justify-content: space-between; }
     body footer .el-footer {
       grid-area: el-footer; }
-    body footer p {
+    body footer .estilo-footer {
       font-family: 'Urbanist', sans-serif;
-      font-weight: bolder;
-      font-size: 14.28571px;
+      font-size: .8rem;
       color: #2e3532; }
-    body footer ul {
+    body footer .flex-footer {
       font-family: 'Urbanist', sans-serif;
-      font-weight: bolder;
       font-size: 14.28571px; }
-      body footer ul li {
+      body footer .flex-footer li {
         display: inline-flex; }
-        body footer ul li a:link, body footer ul li a:visited, body footer ul li a:active {
+        body footer .flex-footer li a:link, body footer .flex-footer li a:visited, body footer .flex-footer li a:active {
           text-decoration: none;
           cursor: pointer; }
-        body footer ul li a {
+        body footer .flex-footer li a {
           color: #2e3532; }
-          body footer ul li a:hover {
+          body footer .flex-footer li a:hover {
             color: white; }
   @media (min-width: 576px) and (max-width: 768px) {
     body header .navbar .container-fluid .botoncito {
@@ -362,24 +370,19 @@ body {
       justify-content: space-between; }
       body .el-main-cba footer .el-footer {
         grid-area: el-footer; }
-      body .el-main-cba footer p {
+      body .el-main-cba footer .estilo-footer {
         font-family: 'Urbanist', sans-serif;
-        font-weight: bolder;
-        font-size: 14.28571px;
+        font-size: .8rem;
         color: #2e3532; }
-      body .el-main-cba footer ul {
-        font-family: 'Urbanist', sans-serif;
-        font-weight: bolder;
-        font-size: 14.28571px; }
-        body .el-main-cba footer ul li {
-          display: inline-flex; }
-          body .el-main-cba footer ul li a:link, body .el-main-cba footer ul li a:visited, body .el-main-cba footer ul li a:active {
-            text-decoration: none;
-            cursor: pointer; }
-          body .el-main-cba footer ul li a {
-            color: #2e3532; }
-            body .el-main-cba footer ul li a:hover {
-              color: white; }
+      body .el-main-cba footer .flex-footer li {
+        display: inline-flex; }
+        body .el-main-cba footer .flex-footer li a:link, body .el-main-cba footer .flex-footer li a:visited, body .el-main-cba footer .flex-footer li a:active {
+          text-decoration: none;
+          cursor: pointer; }
+        body .el-main-cba footer .flex-footer li a {
+          color: #2e3532; }
+          body .el-main-cba footer .flex-footer li a:hover {
+            color: white; }
   @media (min-width: 576px) and (max-width: 768px) {
     body header .navbar .container-fluid .botoncito {
       margin-right: 3em; }
@@ -507,24 +510,19 @@ body {
     justify-content: space-between; }
     body footer .el-footer {
       grid-area: el-footer; }
-    body footer p {
+    body footer .estilo-footer {
       font-family: 'Urbanist', sans-serif;
-      font-weight: bolder;
-      font-size: 14.28571px;
+      font-size: .8rem;
       color: #2e3532; }
-    body footer ul {
-      font-family: 'Urbanist', sans-serif;
-      font-weight: bolder;
-      font-size: 14.28571px; }
-      body footer ul li {
-        display: inline-flex; }
-        body footer ul li a:link, body footer ul li a:visited, body footer ul li a:active {
-          text-decoration: none;
-          cursor: pointer; }
-        body footer ul li a {
-          color: #2e3532; }
-          body footer ul li a:hover {
-            color: white; }
+    body footer .flex-footer li {
+      display: inline-flex; }
+      body footer .flex-footer li a:link, body footer .flex-footer li a:visited, body footer .flex-footer li a:active {
+        text-decoration: none;
+        cursor: pointer; }
+      body footer .flex-footer li a {
+        color: #2e3532; }
+        body footer .flex-footer li a:hover {
+          color: white; }
   @media (min-width: 576px) and (max-width: 768px) {
     body header .navbar .container-fluid .botoncito {
       margin-right: 3em; }
@@ -652,6 +650,19 @@ body {
     grid-template-rows: auto; }
     body footer .el-footer {
       grid-area: el-footer; }
+    body footer .estilo-footer {
+      font-family: 'Urbanist', sans-serif;
+      font-size: .8rem;
+      color: #2e3532; }
+    body footer .flex-footer li {
+      display: inline-flex; }
+      body footer .flex-footer li a:link, body footer .flex-footer li a:visited, body footer .flex-footer li a:active {
+        text-decoration: none;
+        cursor: pointer; }
+      body footer .flex-footer li a {
+        color: #2e3532; }
+        body footer .flex-footer li a:hover {
+          color: white; }
   @media (min-width: 576px) and (max-width: 768px) {
     body header .navbar .container-fluid .botoncito {
       margin-right: 3em; }

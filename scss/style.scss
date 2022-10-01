@@ -13,7 +13,7 @@ body {
         margin: .9em;
         nav{
             background-color: $color-header-footer;               
-            div{
+            .contenedor {
                 .diseno-titulo {
                         margin-left: $margen/5;
                         margin-top: $margen/10;
@@ -27,7 +27,7 @@ body {
                         }
                 .botoncito {
                         display: flex;
-                        justify-self:end;
+                        margin-right: 3em;
                         background-color: #F8FAFF;
                         border: solid #F8FAFF;
                     }
@@ -131,20 +131,22 @@ body {
         margin: .9em;
         padding-left: $margen/10;
         padding-right: $margen/10;
-        display: inline-flex;
+        @include flexbox(inline-flex);
         justify-content: space-between;
+        align-items: center;
         .el-footer{
             grid-area: el-footer;
         }
-        p  {
+        .estilo-footer  {
             font-family: 'Urbanist', sans-serif;
-            font-weight: bolder;
-            font-size: $margen/7;
+            font-size: .8rem;
+            font-weight: bold;
             color: $color-letra-oscuro;
             }
-        ul {
+        .flex-footer {
             li {
-                
+                margin-top: 10px;
+                padding: 5px;
                 a:link, a:visited, a:active {
                     text-decoration: none;
                     cursor: pointer;
@@ -160,14 +162,14 @@ body {
 
  /*MEDIA QUERIES INDEX*/
 
-    /*Small devices (576 a 768px)*/
+    /*Small devices Index (576 a 768px)*/
      @media (min-width: 576px) and (max-width: 768px){
         header{
             .navbar{
-                .container-fluid{
-                    display: inline-flex;
-                    .botoncito {
-                        margin-right: 3em;
+                .contenedor{
+                    display: flex;
+                    h1 {
+                        font-size: 15px;
                     }
                     div{
                         .menu{
@@ -216,13 +218,13 @@ body {
      /*Extra Small devices (300 a 576px)*/
      @media (min-width: 300px) and (max-width: 576px){
         header{
-            .navbar{
-                .container-fluid{
+            .navbar{   
+                .contenedor{
                     h1{
                         font-size: small;
                     }
-                    .botoncito {
-                        margin-right: 0;
+                    .botoncito{
+                        padding: 20rem;
                     }
                     div{
                         .menu{
@@ -264,6 +266,13 @@ body {
             .el-footer{
                 grid-area: el-footer;
             }
+            p {
+                font-size: 5px;
+            }
+            .flex-footer {
+                display: flex;
+                flex-direction: row;
+            }
         }
     }
 }
@@ -273,7 +282,7 @@ body {
     background-color: $color-banner;   
     header{
         nav{              
-            div{
+            .contenedor{  
                 .diseno-titulo {
                     a{
                         text-decoration: none;
@@ -332,15 +341,13 @@ body {
         .el-footer{
         grid-area: el-footer;
         }
-        p  {
+        .estilo-footer  {
             font-family: 'Urbanist', sans-serif;
-            font-weight: bolder;
-            font-size: $margen/7;
+            font-size: .8rem;
             color: $color-letra-oscuro;
             }
-        ul {
+        .flex-footer {
             font-family: 'Urbanist', sans-serif;
-            font-weight: bolder;
             font-size: $margen/7;
             li {
                 display: inline-flex;
@@ -509,16 +516,12 @@ body{
             .el-footer{
                 grid-area: el-footer;
             }
-            p  {
+            .estilo-footer {
                 font-family: 'Urbanist', sans-serif;
-                font-weight: bolder;
-                font-size: $margen/7;
+                font-size: .8rem;
                 color: $color-letra-oscuro;
                 }
-            ul {
-                font-family: 'Urbanist', sans-serif;
-                font-weight: bolder;
-                font-size: $margen/7;
+            .flex-footer {
                 li {
                     display: inline-flex;
                     a:link, a:visited, a:active {
@@ -714,16 +717,12 @@ body {
             .el-footer{
             grid-area: el-footer;
             }
-            p  {
+            .estilo-footer  {
                 font-family: 'Urbanist', sans-serif;
-                font-weight: bolder;
-                font-size: $margen/7;
+                font-size: .8rem;
                 color: $color-letra-oscuro;
                 }
-            ul {
-                font-family: 'Urbanist', sans-serif;
-                font-weight: bolder;
-                font-size: $margen/7;
+            .flex-footer {
                 li {
                     display: inline-flex;
                     a:link, a:visited, a:active {
@@ -932,7 +931,27 @@ body {
         .el-footer{
             grid-area: el-footer;
         }
+        .estilo-footer  {
+            font-family: 'Urbanist', sans-serif;
+            font-size: .8rem;
+            color: $color-letra-oscuro;
+            }
+        .flex-footer {
+            li {
+                display: inline-flex;
+                a:link, a:visited, a:active {
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+                a {     
+                    color: $color-letra-oscuro;
+                    &:hover{
+                        color: white;
+                    }
+                }    
+            }
         }
+    }
 
      /*MEDIA QUERIES CONTACTO*/
 
