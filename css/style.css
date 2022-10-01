@@ -23,11 +23,10 @@ body {
           font-family: 'Urbanist', sans-serif;
           font-weight: 300;
           color: #2e3532;
-          font-size: 33.33333px; }
+          font-size: 2rem; }
           body header nav .container-fluid .diseno-titulo a:hover {
             color: white; }
       body header nav .container-fluid .botoncito {
-        margin-left: 3em;
         background-color: #F8FAFF;
         border: solid #F8FAFF; }
     body header div div .navbar-nav a {
@@ -129,11 +128,9 @@ body {
       body footer .flex-footer li a:hover {
         border-color: #F8FAFF; }
   @media (min-width: 576px) and (max-width: 768px) {
-    body header .navbar .container-fluid h1 {
-      font-size: 15px; }
     body header .navbar .container-fluid div .menu {
       align-items: flex-start;
-      margin-right: 3em; }
+      font-size: 1rem; }
     body .main-grid {
       grid-template-areas: "banner"  "el-subtitulo" "carousel" "las-cards" "las-cards" "las-cards";
       grid-template-columns: 1fr;
@@ -158,11 +155,11 @@ body {
       body footer .el-footer {
         grid-area: el-footer; } }
   @media (min-width: 300px) and (max-width: 576px) {
-    body header .navbar .container-fluid h1 {
-      font-size: small; }
+    body header .navbar .container-fluid .diseno-titulo a {
+      font-size: 1.5rem; }
     body header .navbar .container-fluid div .menu {
       align-items: flex-start;
-      margin-right: 3em; }
+      font-size: 1rem; }
     body .main-grid {
       grid-template-areas: "banner"  "el-subtitulo" "carousel" "las-cards" "las-cards" "las-cards";
       grid-template-columns: 1fr;
@@ -205,7 +202,6 @@ body {
     body header nav .container-fluid .diseno-titulo a:hover {
       color: white; }
   body header nav .container-fluid .botoncito {
-    margin-left: 3em;
     background-color: #F8FAFF;
     border: solid #F8FAFF; }
   body .dpto-main-grid {
@@ -268,12 +264,8 @@ body {
           body footer .flex-footer li a:hover {
             color: white; }
   @media (min-width: 576px) and (max-width: 768px) {
-    body header .navbar .container-fluid .botoncito {
-      margin-right: 3em;
-      margin-left: 3em; }
     body header .navbar .container-fluid div .menu {
-      align-items: flex-start;
-      margin-right: 3em; }
+      align-items: flex-start; }
     body .dpto-main-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -289,12 +281,8 @@ body {
       body footer .el-footer {
         grid-area: el-footer; } }
   @media (min-width: 300px) and (max-width: 576px) {
-    body header .navbar .container-fluid .botoncito {
-      margin-left: 0;
-      margin-right: 3em; }
     body header .navbar .container-fluid div .menu {
-      align-items: flex-start;
-      margin-right: 3em; }
+      align-items: flex-start; }
     body .dpto-main-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -385,12 +373,8 @@ body {
           body .el-main-cba footer .flex-footer li a:hover {
             color: white; }
   @media (min-width: 576px) and (max-width: 768px) {
-    body header .navbar .container-fluid .botoncito {
-      margin-right: 3em;
-      margin-left: 3em; }
     body header .navbar .container-fluid div .menu {
-      align-items: flex-start;
-      margin-right: 3em; }
+      align-items: flex-start; }
     body .el-main-cba {
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto;
@@ -405,12 +389,8 @@ body {
       body footer .el-footer {
         grid-area: el-footer; } }
   @media (min-width: 300px) and (max-width: 576px) {
-    body header .navbar .container-fluid .botoncito {
-      margin-left: 0;
-      margin-right: 3em; }
     body header .navbar .container-fluid div .menu {
-      align-items: flex-start;
-      margin-right: 3em; }
+      align-items: flex-start; }
     body .el-main-cba {
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto;
@@ -440,7 +420,6 @@ body {
     body header nav div .diseno-titulo a:hover {
       color: white; }
   body header nav div .botoncito {
-    margin-left: 3em;
     background-color: #F8FAFF;
     border: solid #F8FAFF; }
   body .estadias-main {
@@ -531,12 +510,8 @@ body {
         body footer .flex-footer li a:hover {
           color: white; }
   @media (min-width: 576px) and (max-width: 768px) {
-    body header .navbar .container-fluid .botoncito {
-      margin-left: 3em;
-      margin-right: 3em; }
     body header .navbar .container-fluid div .menu {
-      align-items: flex-start;
-      margin-right: 3em; }
+      align-items: flex-start; }
     body .estadias-main {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -556,12 +531,8 @@ body {
       body footer .el-footer {
         grid-area: el-footer; } }
   @media (min-width: 300px) and (max-width: 576px) {
-    body header .navbar .container-fluid .botoncito {
-      margin-right: 3em;
-      margin-left: 0; }
     body header .navbar .container-fluid div .menu {
-      align-items: flex-start;
-      margin-right: 3em; }
+      align-items: flex-start; }
     body .estadias-main {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -600,7 +571,6 @@ body {
     body header nav div h1 a:hover {
       color: white; }
   body header nav div .botoncito {
-    margin-left: 3em;
     background-color: #F8FAFF;
     border: solid #F8FAFF; }
   body .el-main-contacto {
@@ -677,12 +647,8 @@ body {
         body footer .flex-footer li a:hover {
           color: white; }
   @media (min-width: 576px) and (max-width: 768px) {
-    body header .navbar .container-fluid .botoncito {
-      margin-left: 3em;
-      margin-right: 3em; }
     body header .navbar .container-fluid div .menu {
-      align-items: flex-start;
-      margin-right: 3em; }
+      align-items: flex-start; }
     body .el-main-contacto {
       display: grid;
       grid-template-areas: "banner" "diseno-subtitulo" "form-mapa" "form-mapa";
@@ -706,12 +672,8 @@ body {
       body footer .el-footer {
         grid-area: el-footer; } }
   @media (min-width: 300px) and (max-width: 576px) {
-    body header .navbar .container-fluid .botoncito {
-      margin-right: 3em;
-      margin-left: 0; }
     body header .navbar .container-fluid div .menu {
-      align-items: flex-start;
-      margin-right: 3em; }
+      align-items: flex-start; }
     body .el-main-contacto {
       display: grid;
       grid-template-areas: "banner" "diseno-subtitulo" "form-mapa" "form-mapa";
