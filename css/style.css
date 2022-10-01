@@ -622,11 +622,14 @@ body {
             border-color: #f1a208; }
       body .el-main-contacto .form-mapa .campo-mapa {
         border: solid 3px #2e3532;
-        justify-content: center;
-        max-width: 500px;
+        justify-content: baseline;
+        max-width: auto;
         width: auto;
         height: auto;
         padding: 3em; }
+        body .el-main-contacto .form-mapa .campo-mapa .mapa {
+          margin-left: 0;
+          margin-right: 0; }
   body footer {
     grid-template-areas: "el-footer el-footer";
     grid-template-columns: 1fr 1fr;
@@ -664,7 +667,7 @@ body {
         display: flex;
         flex-direction: column; }
         body .el-main-contacto .form-mapa .campo-mapa {
-          justify-items: center; }
+          width: auto; }
     body footer {
       grid-template-areas: "el-footer el-footer";
       grid-template-columns: 1fr 1fr;
@@ -690,6 +693,9 @@ body {
         flex-direction: column;
         width: auto;
         height: auto; }
+        body .el-main-contacto .form-mapa .mapa {
+          margin-left: 0;
+          margin-right: 0; }
     body footer {
       grid-template-areas: "el-footer el-footer";
       grid-template-columns: 1fr 1fr;
