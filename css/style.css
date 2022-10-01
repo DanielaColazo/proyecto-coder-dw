@@ -14,21 +14,20 @@ body {
     margin: .9em; }
     body header nav {
       background-color: #a0b986; }
-      body header nav .contenedor .diseno-titulo {
+      body header nav .container-fluid .diseno-titulo {
         margin-left: 20px;
         margin-top: 10px;
         margin-bottom: 20px; }
-        body header nav .contenedor .diseno-titulo a {
+        body header nav .container-fluid .diseno-titulo a {
           text-decoration: none;
           font-family: 'Urbanist', sans-serif;
           font-weight: 300;
           color: #2e3532;
           font-size: 33.33333px; }
-          body header nav .contenedor .diseno-titulo a:hover {
+          body header nav .container-fluid .diseno-titulo a:hover {
             color: white; }
-      body header nav .contenedor .botoncito {
-        display: flex;
-        margin-right: 3em;
+      body header nav .container-fluid .botoncito {
+        margin-left: 3em;
         background-color: #F8FAFF;
         border: solid #F8FAFF; }
     body header div div .navbar-nav a {
@@ -130,11 +129,11 @@ body {
       body footer .flex-footer li a:hover {
         border-color: #F8FAFF; }
   @media (min-width: 576px) and (max-width: 768px) {
-    body header .navbar .contenedor {
+    body header .navbar .container-fluid {
       display: flex; }
-      body header .navbar .contenedor h1 {
+      body header .navbar .container-fluid h1 {
         font-size: 15px; }
-      body header .navbar .contenedor div .menu {
+      body header .navbar .container-fluid div .menu {
         align-items: flex-start;
         margin-right: 3em; }
     body .main-grid {
@@ -161,11 +160,9 @@ body {
       body footer .el-footer {
         grid-area: el-footer; } }
   @media (min-width: 300px) and (max-width: 576px) {
-    body header .navbar .contenedor h1 {
+    body header .navbar .container-fluid h1 {
       font-size: small; }
-    body header .navbar .contenedor .botoncito {
-      padding: 20rem; }
-    body header .navbar .contenedor div .menu {
+    body header .navbar .container-fluid div .menu {
       align-items: flex-start;
       margin-right: 3em; }
     body .main-grid {
@@ -201,14 +198,18 @@ body {
   /*MEDIA QUERIES DEPARTAMENTO*/
   /*Small devices (576 a 768px)*/
   /*Extra Small devices (300 a 576px)*/ }
-  body header nav .contenedor .diseno-titulo a {
+  body header nav .container-fluid .diseno-titulo a {
     text-decoration: none;
     font-family: 'Urbanist', sans-serif;
     font-weight: 300;
     color: #2e3532;
     font-size: 33.33333px; }
-    body header nav .contenedor .diseno-titulo a:hover {
+    body header nav .container-fluid .diseno-titulo a:hover {
       color: white; }
+  body header nav .container-fluid .botoncito {
+    margin-left: 3em;
+    background-color: #F8FAFF;
+    border: solid #F8FAFF; }
   body .dpto-main-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -270,7 +271,8 @@ body {
             color: white; }
   @media (min-width: 576px) and (max-width: 768px) {
     body header .navbar .container-fluid .botoncito {
-      margin-right: 3em; }
+      margin-right: 3em;
+      margin-left: 3em; }
     body header .navbar .container-fluid div .menu {
       align-items: flex-start;
       margin-right: 3em; }
@@ -290,6 +292,7 @@ body {
         grid-area: el-footer; } }
   @media (min-width: 300px) and (max-width: 576px) {
     body header .navbar .container-fluid .botoncito {
+      margin-left: 0;
       margin-right: 3em; }
     body header .navbar .container-fluid div .menu {
       align-items: flex-start;
@@ -385,7 +388,8 @@ body {
             color: white; }
   @media (min-width: 576px) and (max-width: 768px) {
     body header .navbar .container-fluid .botoncito {
-      margin-right: 3em; }
+      margin-right: 3em;
+      margin-left: 3em; }
     body header .navbar .container-fluid div .menu {
       align-items: flex-start;
       margin-right: 3em; }
@@ -404,6 +408,7 @@ body {
         grid-area: el-footer; } }
   @media (min-width: 300px) and (max-width: 576px) {
     body header .navbar .container-fluid .botoncito {
+      margin-left: 0;
       margin-right: 3em; }
     body header .navbar .container-fluid div .menu {
       align-items: flex-start;
@@ -436,6 +441,10 @@ body {
     font-size: 33.33333px; }
     body header nav div .diseno-titulo a:hover {
       color: white; }
+  body header nav div .botoncito {
+    margin-left: 3em;
+    background-color: #F8FAFF;
+    border: solid #F8FAFF; }
   body .estadias-main {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -525,6 +534,7 @@ body {
           color: white; }
   @media (min-width: 576px) and (max-width: 768px) {
     body header .navbar .container-fluid .botoncito {
+      margin-left: 3em;
       margin-right: 3em; }
     body header .navbar .container-fluid div .menu {
       align-items: flex-start;
@@ -549,7 +559,8 @@ body {
         grid-area: el-footer; } }
   @media (min-width: 300px) and (max-width: 576px) {
     body header .navbar .container-fluid .botoncito {
-      margin-right: 3em; }
+      margin-right: 3em;
+      margin-left: 0; }
     body header .navbar .container-fluid div .menu {
       align-items: flex-start;
       margin-right: 3em; }
@@ -590,6 +601,10 @@ body {
     font-size: 33.33333px; }
     body header nav div h1 a:hover {
       color: white; }
+  body header nav div .botoncito {
+    margin-left: 3em;
+    background-color: #F8FAFF;
+    border: solid #F8FAFF; }
   body .el-main-contacto {
     display: grid;
     grid-template-areas: "banner banner" "diseno-subtitulo diseno-subtitulo" "form-mapa form-mapa" "form-mapa form-mapa";
@@ -665,6 +680,7 @@ body {
           color: white; }
   @media (min-width: 576px) and (max-width: 768px) {
     body header .navbar .container-fluid .botoncito {
+      margin-left: 3em;
       margin-right: 3em; }
     body header .navbar .container-fluid div .menu {
       align-items: flex-start;
@@ -693,7 +709,8 @@ body {
         grid-area: el-footer; } }
   @media (min-width: 300px) and (max-width: 576px) {
     body header .navbar .container-fluid .botoncito {
-      margin-right: 3em; }
+      margin-right: 3em;
+      margin-left: 0; }
     body header .navbar .container-fluid div .menu {
       align-items: flex-start;
       margin-right: 3em; }

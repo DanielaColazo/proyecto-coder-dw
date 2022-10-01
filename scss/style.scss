@@ -13,7 +13,7 @@ body {
         margin: .9em;
         nav{
             background-color: $color-header-footer;               
-            .contenedor {
+            .container-fluid {
                 .diseno-titulo {
                         margin-left: $margen/5;
                         margin-top: $margen/10;
@@ -26,8 +26,7 @@ body {
                             }
                         }
                 .botoncito {
-                        display: flex;
-                        margin-right: 3em;
+                        margin-left: 3em;
                         background-color: #F8FAFF;
                         border: solid #F8FAFF;
                     }
@@ -166,7 +165,7 @@ body {
      @media (min-width: 576px) and (max-width: 768px){
         header{
             .navbar{
-                .contenedor{
+                .container-fluid{
                     display: flex;
                     h1 {
                         font-size: 15px;
@@ -219,12 +218,9 @@ body {
      @media (min-width: 300px) and (max-width: 576px){
         header{
             .navbar{   
-                .contenedor{
+                .container-fluid{
                     h1{
                         font-size: small;
-                    }
-                    .botoncito{
-                        padding: 20rem;
                     }
                     div{
                         .menu{
@@ -282,7 +278,7 @@ body {
     background-color: $color-banner;   
     header{
         nav{              
-            .contenedor{  
+            .container-fluid{  
                 .diseno-titulo {
                     a{
                         text-decoration: none;
@@ -290,6 +286,11 @@ body {
                         &:hover {
                             color: white;}
                         }   
+                    }
+                    .botoncito{
+                        margin-left: 3em;
+                        background-color: #F8FAFF;
+                        border: solid #F8FAFF;
                     }
                 }
             }
@@ -374,6 +375,7 @@ body {
                 .container-fluid{
                     .botoncito {
                         margin-right: 3em;
+                        margin-left: 3em;
                     }
                     div{
                         .menu{
@@ -412,6 +414,7 @@ body {
             .navbar{
                 .container-fluid{
                     .botoncito {
+                        margin-left: 0;
                         margin-right: 3em;
                     }
                     div{
@@ -548,6 +551,7 @@ body{
                 .container-fluid{
                     .botoncito {
                         margin-right: 3em;
+                        margin-left: 3em;
                     }
                     div{
                         .menu{
@@ -586,6 +590,7 @@ body{
             .navbar{
                 .container-fluid{
                     .botoncito {
+                        margin-left: 0;
                         margin-right: 3em;
                     }
                     div{
@@ -633,6 +638,11 @@ body {
                         &:hover {
                             color: white;}
                         }   
+                    }
+                    .botoncito{
+                        margin-left: 3em;
+                        background-color: #F8FAFF;
+                        border: solid #F8FAFF;
                     }
                 }
             }
@@ -747,6 +757,7 @@ body {
             .navbar{
                 .container-fluid{
                     .botoncito {
+                        margin-left: 3em;
                         margin-right: 3em;
                     }
                     div{
@@ -795,6 +806,7 @@ body {
                 .container-fluid{
                     .botoncito {
                         margin-right: 3em;
+                        margin-left: 0;
                     }
                     div{
                         .menu{
@@ -855,6 +867,11 @@ body {
                         &:hover {
                             color: white;}
                         }   
+                    }
+                    .botoncito{
+                        margin-left: 3em;
+                        background-color: #F8FAFF;
+                        border: solid #F8FAFF;
                     }
                 }
             }
@@ -962,6 +979,7 @@ body {
             .navbar{
                 .container-fluid{
                     .botoncito {
+                        margin-left: 3em;
                         margin-right: 3em;
                     }
                     div{
@@ -1014,6 +1032,7 @@ body {
                 .container-fluid{
                     .botoncito {
                         margin-right: 3em;
+                        margin-left: 0;
                     }
                     div{
                         .menu{
