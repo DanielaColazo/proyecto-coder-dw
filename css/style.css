@@ -129,13 +129,11 @@ body {
       body footer .flex-footer li a:hover {
         border-color: #F8FAFF; }
   @media (min-width: 576px) and (max-width: 768px) {
-    body header .navbar .container-fluid {
-      display: flex; }
-      body header .navbar .container-fluid h1 {
-        font-size: 15px; }
-      body header .navbar .container-fluid div .menu {
-        align-items: flex-start;
-        margin-right: 3em; }
+    body header .navbar .container-fluid h1 {
+      font-size: 15px; }
+    body header .navbar .container-fluid div .menu {
+      align-items: flex-start;
+      margin-right: 3em; }
     body .main-grid {
       grid-template-areas: "banner"  "el-subtitulo" "carousel" "las-cards" "las-cards" "las-cards";
       grid-template-columns: 1fr;
