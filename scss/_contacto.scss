@@ -1,0 +1,240 @@
+body {
+    header{
+        nav{              
+            div{
+                h1{
+                    a{
+                        text-decoration: none;
+                        @include font-family ($color-letra-oscuro, $margen/3);
+                        &:hover {
+                            color: white;}
+                        }   
+                    }
+                    .botoncito{
+                        background-color: #F8FAFF;
+                        border: solid #F8FAFF;
+                    }
+                }
+            }
+        } 
+    .el-main-contacto {
+        display: grid;
+        grid-template-areas:"banner banner"
+                            "diseno-subtitulo diseno-subtitulo"
+                            "form-mapa form-mapa"
+                            "form-mapa form-mapa";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto; 
+        border: solid 5px $color-letra-oscuro;                  
+        .banner{
+            grid-area: banner;
+        }
+        h2 {
+            grid-area: diseno-subtitulo;
+            text-align: left;
+            font-family: 'Sacramento', cursive;
+            font-size: 3rem;
+            padding-bottom: 5rem;
+        }
+        .form-mapa{
+            @include flexbox(row);
+            @include font-family ($color-letra-oscuro, medium);
+            text-align: center;
+            font-weight: bold;
+            flex-wrap: wrap;
+            grid-area: form-mapa;
+            gap: 3em;
+            justify-content: center;
+            .campo-formulario{
+            border: solid 3px $color-letra-oscuro;
+            padding: 3em; 
+            padding-top: 4rem; 
+            background-image: url(../images/blancoynegro.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+                .formulario {
+                    width: auto;
+                    height: auto;
+                    max-width: 500px;
+                    @include flexbox(column);
+                    .dejanos-datos {
+                        color: whitesmoke;
+                        font-size: large;
+                        font-weight: lighter;
+                        margin-top: 4em;
+                    }
+                    .input {
+                        width: 90%;
+                        height: 2em;
+                        margin: 0.5rem;
+                        transition: height 3s, width 3s;  
+                        text-align: center;
+                        &:hover {
+                            height: 2em;
+                            width: 100%;
+                            border: solid 2px $color-amarillo;
+                        }
+                    }
+                    .boton {
+                        cursor: pointer;
+                        background-color: $color-amarillo;
+                        border-color: $color-amarillo;
+                            &:hover {
+                                @extend .boton;
+                            }
+                    }
+                }
+            }
+            .campo-mapa {
+                border: solid 3px $color-letra-oscuro;  
+                justify-content: baseline;  
+                max-width: auto;
+                width: auto;
+                height: auto;
+                padding: 3em;
+                background-image: url(../images/blancoynegro2.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+                .donde-estamos {
+                    color: whitesmoke;
+                }
+                .mapa{
+                    margin-left: 0;
+                    margin-right: 0;
+                } 
+            }
+        }
+    }    
+    footer {
+        grid-template-areas:"el-footer el-footer";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        .el-footer{
+            grid-area: el-footer;
+        }
+        .estilo-footer  {
+            font-family: 'Urbanist', sans-serif;
+            font-size: .8rem;
+            color: $color-letra-oscuro;
+            }
+        .flex-footer {
+            li {
+                display: inline-flex;
+                a:link, a:visited, a:active {
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+                a {     
+                    color: $color-letra-oscuro;
+                    &:hover{
+                        color: white;
+                    }
+                }    
+            }
+        }
+    }
+
+     /*MEDIA QUERIES CONTACTO*/
+
+    /*Small devices (576 a 768px)*/
+    
+    @media (min-width: 576px) and (max-width: 768px){
+        header{
+            .navbar{
+                .container-fluid{
+                    div{
+                        .menu{
+                            align-items: flex-start;
+                        }
+                    }
+                }
+            }
+        }
+        .el-main-contacto {
+            display: grid;
+            grid-template-areas:"banner"
+                                "diseno-subtitulo"
+                                "form-mapa"
+                                "form-mapa";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto;   
+            .banner {
+                display: flex;
+                width: auto;
+            }                
+            h2 {
+                font-size: 2rem;
+                text-align: center
+            }
+            .form-mapa{
+                @include flexbox(column);
+                .campo-formulario {
+                    width: fit-content;
+                    justify-self: center;
+                }
+                .campo-mapa{
+                    width: fit-content;
+                    justify-self: center;
+                }
+            }
+        }
+    footer {
+        grid-template-areas:"el-footer el-footer";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        .el-footer{
+            grid-area: el-footer;
+        }
+        }
+    }
+     
+    /*Extra Small devices (300 a 576px)*/
+
+     @media (min-width: 300px) and (max-width: 576px) {
+        header{
+            .navbar{
+                .container-fluid{
+                    div{
+                        .menu{
+                            align-items: flex-start;
+                        }
+                    }
+                }
+            }
+        }
+        .el-main-contacto {
+            display: grid;
+            grid-template-areas:"banner"
+                                "diseno-subtitulo"
+                                "form-mapa"
+                                "form-mapa";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto;                    
+            h2 {
+                font-size: 1.2rem;
+                text-align: center;
+            }
+            .banner{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .form-mapa{
+                @include flexbox(column);
+                width: auto;
+                height: auto;
+                .mapa {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+    footer {
+        grid-template-areas:"el-footer el-footer";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        .el-footer{
+            grid-area: el-footer;
+        }
+        }
+    }
+}

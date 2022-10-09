@@ -7,8 +7,7 @@ $margen: 100px;
 $quantity: 15;
 
 @mixin font-family($color, $size) {
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 300;
+    font-family: 'Playfair Display', serif;
     color: $color;
     font-size: $size;
 }
