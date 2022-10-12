@@ -27,13 +27,15 @@ body {
             border: solid 5px $color-letra-oscuro; 
             margin-top: 6em;
             width: auto;
+            background-image: url(../images/mathilde-langevin-8o9BX-Nht2E-unsplash.jpg);
+            background-position:center center;
             .banner{
                 grid-area: banner;
             }
             .el-subtitulo {
                 grid-area: el-subtitulo;
                 border-bottom: solid 0 $color-banner; 
-                margin: .70em -1em 2em 3em;
+                margin: .70em -1em 2em 1em;
                 height: 100%;
                 width: fit-content;
                     .flip-card {
@@ -51,7 +53,6 @@ body {
                         transition: transform 0.6s;
                         transform-style: preserve-3d;
                       }
-                      
                       .flip-card:hover .flip-card-inner {
                         transform: rotateY(180deg);
                       }
@@ -64,24 +65,21 @@ body {
                       }
                       
                       .flip-card-front {
-                        color: whitesmoke;
+                        color: black;
                         font-family: 'Sacramento', cursive;
-                        text-align:left;
-                        background-image: url(../images/2.jpg);
+                        text-align: center;
                         padding-left: 1em;
                       }
                       
                       .flip-card-back {
                         transform: rotateY(180deg);
-                        background-image: url(../images/2.jpg);
-                        padding: 2em;
+                        border: 2px solid black;
+                        background-color: rgba(245, 245, 245, 0.257);
                         p {
-                            @include font-family(whitesmoke, medium);
-                            font-size: medium;
-                            text-align:right;
-                            margin-top: -4em;
-                            justify-self: right;
-                            margin-right: -4em;
+                            @include font-family(black, medium);
+                            font-weight: bold;
+                            text-align: center;
+                            margin: 2rem;
                         }
                       }
             }   
@@ -92,15 +90,15 @@ body {
                     width: 360px;
                     height: 360px;
                     .card{
-                        background-color: #acba9d; 
-                        border: solid 2px #d4bcd6;
+                        background-color: #898d8a60; 
+                        border: solid 2px #898d8a60;
                         .card-img-top {
                             border:solid 2px #d4bcd6;
                         }
                         .card-body{
                             text-align: center;
-                            border:solid 2px #d4bcd6;
-                            background-color: #628974;
+                            border:solid 2px #45474560;
+                            background-color: #45474560;
                             height: auto;
                             @include font-family (rgb(242, 228, 228), 15px);
                             .card-title {
@@ -110,11 +108,12 @@ body {
                             }
                             .boton-estadia {
                                 font-weight: bold;
-                                background-color:$color-letra-oscuro;
-                                border-color: $color-letra-oscuro;
+                                background-color:black;
+                                border-color: black;
                                 &:hover {
-                                background-color: $color-banner;
-                                border-color: $color-banner;
+                                background-color: rgba(255, 255, 255, 0.797);
+                                border-color: rgba(255, 255, 255, 0.797);
+                                color: black;
                                 }
                             }
                         }
@@ -180,6 +179,20 @@ body {
                                 "el-subtitulo"  
                                 "cards-estadia";
             @include flexbox(column);
+            .el-subttulo {
+                .flip-card{
+                width: auto;
+                justify-content:space-between;
+                }
+                .flip-card-front {
+                    justify-content: center;
+                    padding: 2em 2em 2em 2em;
+                }
+                .flip-card-back {
+                    justify-content: center;
+                    padding: 2em 2em 2em 2em;
+                }
+            }
             .cards-estadia {
                 justify-content: center;
             }
@@ -193,28 +206,6 @@ body {
         .el-footer{
             grid-area: el-footer;
         }
-        }
-    
-     
-    /*Extra Small devices (300 a 576px)*/
-
-     @media (min-width: 300px) and (max-width: 576px){
-        .estadias-main {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto auto;
-            grid-template-areas:"banner"
-                                "el-subtitulo"  
-                                "cards-estadia";            
-            }
-        }       
-    footer {
-        grid-template-areas:"el-footer el-footer";
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        .el-footer{
-            grid-area: el-footer;
-        }
-        }
     }
+}
 

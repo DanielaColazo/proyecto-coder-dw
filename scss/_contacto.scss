@@ -25,7 +25,9 @@ body {
                             "form-mapa form-mapa";
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto auto; 
-        border: solid 5px $color-letra-oscuro;                  
+        border: solid 5px $color-letra-oscuro; 
+        background-image: url(../images/mathilde-langevin-8o9BX-Nht2E-unsplash.jpg);  
+        background-position: left center;          
         .banner{
             grid-area: banner;
         }
@@ -35,6 +37,9 @@ body {
             font-family: 'Sacramento', cursive;
             font-size: 3rem;
             padding-bottom: 5rem;
+            padding-top: 2em;
+            padding-left: 2em;
+            color: black;
         }
         .form-mapa{
             @include flexbox(row);
@@ -47,21 +52,30 @@ body {
             justify-content: center;
             .campo-formulario{
             border: solid 3px $color-letra-oscuro;
-            padding: 3em; 
-            padding-top: 4rem; 
-            background-image: url(../images/blancoynegro.png);
+            background-image: url(../images/catastro-3.jpg);
             background-repeat: no-repeat;
-            background-position: center center;
+            background-position: top left;
+            padding: 3em;
                 .formulario {
                     width: auto;
                     height: auto;
                     max-width: 500px;
                     @include flexbox(column);
                     .dejanos-datos {
+                        margin-bottom: 4rem;
+                        margin-top: 4rem;
                         color: whitesmoke;
                         font-size: large;
                         font-weight: lighter;
                         margin-top: 4em;
+                        background-color: black;
+                    }
+                    .datos {
+                        background-color: black;
+                        color: whitesmoke;
+                        width: 50%;  
+                        margin: 10px;
+                        font-weight: 400;
                     }
                     .input {
                         width: 90%;
@@ -69,18 +83,23 @@ body {
                         margin: 0.5rem;
                         transition: height 3s, width 3s;  
                         text-align: center;
+                        color: black;
                         &:hover {
                             height: 2em;
                             width: 100%;
-                            border: solid 2px $color-amarillo;
+                            border: solid 2px #cb73d3;
                         }
                     }
                     .boton {
                         cursor: pointer;
-                        background-color: $color-amarillo;
-                        border-color: $color-amarillo;
+                        background-color:black;
+                        border-color: black;
                             &:hover {
-                                @extend .boton;
+                                cursor: pointer;
+                                background-color: rgba(255, 255, 255, 0.797);
+                                border-color: rgba(255, 255, 255, 0.797);
+                                color: black;
+                                font-weight: bold;
                             }
                     }
                 }
@@ -92,11 +111,12 @@ body {
                 width: auto;
                 height: auto;
                 padding: 3em;
-                background-image: url(../images/blancoynegro2.png);
+                background-image: url(../images/catastro-3.jpg);
                 background-repeat: no-repeat;
-                background-position: center center;
+                background-position: top right;
                 .donde-estamos {
                     color: whitesmoke;
+                    background-color: black;
                 }
                 .mapa{
                     margin-left: 0;
@@ -163,17 +183,20 @@ body {
                 width: auto;
             }                
             h2 {
-                font-size: 2rem;
-                text-align: center
+                text-align: center;
+                width: 100%;
+                padding: 0;
+                margin: 0;
             }
             .form-mapa{
+                padding: 3em;
                 @include flexbox(column);
                 .campo-formulario {
-                    width: fit-content;
+                    width: 100%;
                     justify-self: center;
                 }
                 .campo-mapa{
-                    width: fit-content;
+                    width: 100%;
                     justify-self: center;
                 }
             }
@@ -186,55 +209,5 @@ body {
             grid-area: el-footer;
         }
         }
-    }
-     
-    /*Extra Small devices (300 a 576px)*/
-
-     @media (min-width: 300px) and (max-width: 576px) {
-        header{
-            .navbar{
-                .container-fluid{
-                    div{
-                        .menu{
-                            align-items: flex-start;
-                        }
-                    }
-                }
-            }
-        }
-        .el-main-contacto {
-            display: grid;
-            grid-template-areas:"banner"
-                                "diseno-subtitulo"
-                                "form-mapa"
-                                "form-mapa";
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto auto auto;                    
-            h2 {
-                font-size: 1.2rem;
-                text-align: center;
-            }
-            .banner{
-                display: flex;
-                flex-wrap: wrap;
-            }
-            .form-mapa{
-                @include flexbox(column);
-                width: auto;
-                height: auto;
-                .mapa {
-                    margin-left: 0;
-                    margin-right: 0;
-                }
-            }
-        }
-    footer {
-        grid-template-areas:"el-footer el-footer";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        .el-footer{
-            grid-area: el-footer;
-        }
-        }
-    }
+    }    
 }

@@ -14,7 +14,7 @@ body {
                     margin-bottom: $margen/10; 
                     a{
                         text-decoration: none;
-                        color: #2E3532;
+                        color: black;
                         font-family: 'Sacramento', cursive;
                         font-size: 3.5rem;
                         &:hover {
@@ -50,11 +50,13 @@ body {
 main{
     display: grid;
     grid-template-areas:"banner banner banner" 
+                        "bienvenidos bienvenidos bienvenidos"
                         "el-subtitulo carousel carousel"
                         "el-subtitulo carousel carousel"
+                        "secciones secciones secciones"
                         "las-cards las-cards las-cards";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     border: solid 5px $color-letra-oscuro; 
     margin: 1em;
     padding: 1.3em; 
@@ -62,7 +64,8 @@ main{
     margin-bottom: 2em;
     @include font-family($color-letra-oscuro, medium);
     height: fit-content;
-
+    background-image: url(../images/mathilde-langevin-8o9BX-Nht2E-unsplash.jpg);
+    background-position: center center;
     .banner{
         grid-area: banner;
         background-image: url(../images/02.jpg);
@@ -70,18 +73,34 @@ main{
         justify-content: space-around;
         height: 7em;
     }   
+    .bienvenidos {
+        grid-area: bienvenidos;
+        display: inline-block;
+            background-color: rgba(245, 245, 245, 0.69);
+            color: black;
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            height: 2em;
+            margin-top: 3em;
+            align-self: center;
+            margin-bottom: 3em;
+            p {
+                padding-top: 1rem;
+            }
+    }
 
     .el-subtitulo {    
         grid-area: el-subtitulo;
         font-family: 'Sacramento', cursive;
         font-size: 2.5rem;
-        margin-top: 5rem;
+        margin-top: 2rem;
         margin-bottom: 5em;
-        margin-left: 4em;
-        margin-right: 4em;
-        padding-top: 5rem;
+        color: black;
+        padding: -3rem 3rem -2rem 3rem;
         text-align: center;
-        border-bottom: 2px solid $color-letra-oscuro;
+        border-bottom: .25px solid black;
         }
     .carousel {
         grid-area: carousel;
@@ -94,10 +113,24 @@ main{
                 align-self: center;
             }
         }
+    .secciones {
+        grid-area: secciones;
+        display: inline-block;
+            background-color: rgba(245, 245, 245, 0.69);
+            color: black;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            align-content: center;
+            width: 100%;
+            height: 2.5em;
+            margin-top: 5em;
+            padding-top: 1rem;
+        }
     .las-cards {
         grid-area: las-cards;
         .card {
-            background-color: #74c59a;
+            background-color: #b0b3b1d7;
             .card-img-top{
                 height: 180px;
             }
@@ -112,7 +145,7 @@ main{
                         background-color: map-get($mapa, $key:color-banner);
                         border-color: map-get($mapa , $key:color-banner);
                         transition: ease-in 1s;
-                        color: whitesmoke;
+                        color: white;
                         &:hover {
                             background-color: map-get($mapa , $key:color-banner );
                             border-color:solid 2px map-get($mapa , $key:color-banner );
@@ -121,6 +154,7 @@ main{
                         }
                     }
                 .card-text {
+                    color: black;
                     font-weight: 300;
                     padding-bottom: 3rem;
                     padding-right: 1.5rem;
@@ -190,9 +224,10 @@ footer {
         grid-template-areas: "banner" 
                              "el-subtitulo"
                              "carousel"
+                             "secciones"
                              "las-cards";
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto;
         @include flexbox (column);
         .banner{
             width: 100%;
@@ -211,6 +246,9 @@ footer {
         .carousel{
             width: fit-content;
         }
+        .secciones {
+            margin-top: 5em;
+        }
         .las-cards {
         @include flexbox(column);
         justify-content: space-between;
@@ -227,96 +265,6 @@ footer {
         grid-template-rows: auto;
         .el-footer{
             grid-area: el-footer;
-        }
-    }
-}
- /*Extra Small devices (300 a 576px)*/
- @media (min-width: 300px) and (max-width: 576px){
-    header{
-        .navbar{   
-            .container-fluid{
-                .diseno-titulo{
-                    a {
-                        font-size: 3rem;
-                    }
-                }
-                div{
-                    .menu{
-                        align-items: flex-start;
-                        font-size: 1rem;
-                    }
-                }
-            }
-        }
-    }
-    .main-grid {
-        grid-template-areas: "banner" 
-                             "el-subtitulo"
-                             "carousel"
-                             "las-cards";
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
-        @include flexbox(column);
-        .banner{
-            justify-content: space-around;
-            height: 5rem;
-        }
-        .el-subtitulo {
-            font-size: 2rem;
-            text-align: center;
-            margin-top: 1em;
-            margin-bottom: 1em;
-            border: none;
-            align-self: center;
-        }
-        .carousel{
-            width: auto;
-        }
-        .las-cards {
-        @include flexbox(column);
-        justify-content: space-between;
-        padding-top: 3em;
-        .card {
-            align-self: center;
-            height: fit-content;
-            width: 70%;
-            background-color: #dd7230;
-            box-shadow: #2E3532 1px;
-            .card-img-top{
-                width: 0%;
-                height: 0%;
-        }
-            .card-body{
-                padding-top: 2em;
-                a {
-                    font-family: 'Sacramento', cursive;
-                    font-weight: 100;
-                    font-size: 1.6rem;
-                    background-color: #dd7230;
-                    border-color:  #dd7230;
-                    color: whitesmoke;
-
-                }
-                .card-text{
-                    visibility: hidden;
-                }
-            }
-        }
-    }
-    }
-    footer {
-        grid-template-areas:"el-footer el-footer";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        .el-footer{
-            grid-area: el-footer;
-        }
-        p {
-            font-size: 5px;
-        }
-        .flex-footer {
-            display: flex;
-            flex-direction: row;
         }
     }
 }

@@ -1,3 +1,4 @@
+
 body {  
     header{
         nav{              
@@ -17,76 +18,49 @@ body {
         } 
     .dpto-main-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        grid-template-areas:"banner banner banner"
-                            "carousel carousel el-subtitulo"   
-                            "carousel carousel el-subtitulo";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:"banner banner"
+                            "carousel el-subtitulo";
         border: solid 5px $color-letra-oscuro;  
         margin-top: 6em;
-        margin-bottom: 2em;
+        width: auto;
+        height: fit-content;
+        margin-left: 2em;
+        margin-right: 2em;
+        background-image: url(../images/mathilde-langevin-8o9BX-Nht2E-unsplash.jpg);
+        background-position: center top;
+        gap: 3em;
         .banner {
             grid-area: banner;
         }
-        .el-subtitulo {   
-            justify-self: right;
+        .el-subtitulo {  
+            grid-area: el-subtitulo;
             border-bottom: solid 0 $color-banner; 
-            .flip-card {
-                width: 400px;
-                height: 350px;
-                perspective: 1000px;
-                margin-right: -2em;
-                margin-top: -1.5em;
-              }
-              
-              .flip-card-inner {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                text-align: center;
-                transition: transform 0.6s;
-                transform-style: preserve-3d;
-                background-image: url(../images/cosmos-flower-field.jpg);
-              }
-              
-              .flip-card:hover .flip-card-inner {
-                transform: rotateY(180deg);
-              }
-              
-              .flip-card-front, .flip-card-back {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                backface-visibility: hidden;
-              }
-              
-              .flip-card-front {
+            width: 100%;
+            margin-top: 2.5em;
+              .el-departamento {
                 color: black;
                 font-family: 'Sacramento', cursive;
-                text-align: center;
-                align-self: center;
-              }
+                }
               
-              .flip-card-back {
-                color: black;
-                font-family: 'Playfair Display', serif;
-                font-size: medium;
-                text-align: center;
-                transform: rotateY(180deg);
-                background-color: rgba(245, 245, 245, 0.359);
-                height: fit-content;
-                background-image: url(../images/cosmos-flower-field.jpg);
+              .texto-departamento {
+                border: solid 2px black;
+                background-color: rgba(245, 245, 245, 0.257);
                 p {
                     padding: 1rem;
+                    color: black;
+                    font-family: 'Playfair Display', serif;
+                    font-size: medium;
                 }
               }
         }       
         .carousel{
             grid-area: carousel;
-            width: 110%;
-            height: fit-content;
+            width: 100%;
+            height: auto;
             justify-content: center;
-            margin-top: 5em;
+            margin-top: 10em;
             margin-bottom: 1em;
         }
     }
@@ -132,60 +106,28 @@ body {
     @media (min-width: 576px) and (max-width: 768px){
         .dpto-main-grid{
         grid-template-columns: 10% 80% 10%;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto 2fr auto;
         grid-template-areas:"banner banner banner"
-                            ". el-subtitulo ."   
-                            ". carousel .";
-        .banner{
-            width: 100%;
-        }
+                            "el-subtitulo el-subtitulo el-subtitulo"   
+                            "carousel carousel carousel";
+        margin: 2em 2em 2em 2em;
+        overflow-x: hidden;
+        @include flexbox (column);
         .el-subtitulo {   
+            display: flex;
             justify-self: center;
-            margin-left: 1.5em;
-        }      
-        .carousel{
+            height: auto;
             width: 100%;
-            height: fit-content;
+            flex-direction: column;
+        }
+        .carousel{
+            width: auto;
+            height: auto;
             justify-self: center;
-            margin-top: -5em;
+            margin-top: -4em;
+            margin-bottom: 5em;
            }
     }
-        footer {
-        grid-template-areas:"el-footer el-footer";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        .el-footer{
-            grid-area: el-footer;
-        }
-        }
-    }
-     /*Extra Small devices (300 a 576px)*/
-     
-     @media (min-width: 300px) and (max-width: 576px){
-        
-        .dpto-main-grid{
-            grid-template-columns: 10% 80% 10%;
-            grid-template-rows: auto auto auto;
-            grid-template-areas:"banner banner banner"
-                                ". el-subtitulo ."   
-                                ". carousel .";
-            .banner{
-                width: 100%;
-            }
-            .el-subtitulo {   
-                justify-content: center;
-                margin-left: 3em;
-                position: relative;
-                left: 2em;
-                
-            }      
-            .carousel{
-                width: 100%;
-                height: fit-content;
-                justify-self: center;
-                margin-top: -5em;
-               }
-        }
         footer {
         grid-template-areas:"el-footer el-footer";
         grid-template-columns: 1fr 1fr;
