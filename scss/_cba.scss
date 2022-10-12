@@ -1,11 +1,11 @@
 body{
     .el-main-cba {
         display: grid;
-        grid-template-columns: 55% 45%;
+        grid-template-columns: 30% 30% 40%;
         grid-template-rows: 1fr 1.5fr 2fr;
-        grid-template-areas:"banner banner"
-                            "foto-cba el-subtitulo"
-                            "link-agencia link-agencia";
+        grid-template-areas:"banner banner banner"
+                            "foto-cba foto-cba el-subtitulo"
+                            "link-agencia link-agencia link-agencia";
         border: solid 5px $color-letra-oscuro; 
         background-color: $color-banner;
         margin-top: 6em;
@@ -14,7 +14,7 @@ body{
         background-image: url(../images/mathilde-langevin-8o9BX-Nht2E-unsplash.jpg); 
         background-position: top center;
         @include font-family (black, medium);  
-        overflow-x: hidden;  
+        overflow-x: hidden; 
         .banner {
             grid-area: banner;
         } 
@@ -28,14 +28,12 @@ body{
             border-bottom: solid 0 $color-banner; 
             width: 100%;
             height: 100%;
+            margin-top: 3em;
+            margin-right: 2em;
 
-            .flip-card {
-                width: 100%;
-                height: 100%;
-            }
               .flip-card-inner {
                 position: relative;
-                transition: transform 0.6s;
+                transition: transform 0.5s;
                 transform-style: preserve-3d;
               }              
               .flip-card:hover .flip-card-inner {
@@ -44,19 +42,21 @@ body{
                 .flip-card-front, .flip-card-back {
                 position: absolute;
                 backface-visibility: hidden;
-                margin: -3em 0 0 -1em;
               }
               
               .flip-card-front {
                 color: black;
                 font-family: 'Sacramento', cursive;
                 text-justify: center;
+                margin: -1em 0 0 3em;
               }
               
               .flip-card-back {
                 transform: rotateY(180deg);
                 background-color: rgba(245, 245, 245, 0.257);
                 border: solid 2px black;
+                width: 80%;
+                margin: -3em 0 0 5em;
                 p {
                     margin: 2rem;
                     @include font-family (black, .9rem);
@@ -144,9 +144,9 @@ body{
             grid-template-columns: .1fr 1fr .1fr;
             grid-template-rows: .5fr 1.2fr 1fr 2fr;
             grid-template-areas:"banner banner banner"
-                                "el-subtitulo el-subtitulo ."   
-                                ". foto-cba ."
-                                "link-agencia link-agencia .";
+                                "el-subtitulo el-subtitulo el-subtitulo"   
+                                "foto-cba foto-cba foto-cba"
+                                "link-agencia link-agencia link-agencia";
             margin-bottom: 1em;
             @include font-family (black, medium);       
             .foto-cba{
@@ -161,12 +161,14 @@ body{
                     width: 100%;
                     margin-top: 1rem;
                     text-align: center;
-                    padding: 1em 2em 2em 0em;
+                    p {
+                        padding: 1rem 2rem 2rem -3rem;
+                    }
                     }                    
                     .flip-card-back {
                     height: auto;   
                     min-width: 450px; 
-                    margin-left: -2em;
+                    margin-left: 0em;
                 }
             }
         }
@@ -176,6 +178,7 @@ body{
                                         "links .";
                     grid-template-columns: 1fr 0fr;
                     grid-template-rows: auto auto auto;
+                    width: 100%;
                     height: 90%;
                     margin-top: 60px;
                     margin-right: 0px;
